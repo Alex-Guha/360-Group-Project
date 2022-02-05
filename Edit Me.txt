@@ -1,9 +1,22 @@
 <<<<<<< HEAD
+Hi, Edit me whenever you see this so it shows you committed once
+
+
+
+
+
+HI MY NAME IS ZACK >:)
+=======
+<<<<<<< HEAD
 Alex
 Hi, Edit me whenever you see this so it shows you committed once
 =======
 Hi, Edit me whenever you see this so it shows you committed once
 Yumeko
 >>>>>>> 244ac88fa9c3ade2811dc41e16f27501c2b948e3
+<<<<<<< HEAD
 Hi, Edit me whenever you see this so it shows you committed once
 Xin Hwei
+=======
+>>>>>>> f225935521477478e3c36cceb437fe15e871f231
+>>>>>>> 9cc98de87b033c12e023b1023de473f2792a3ea1
