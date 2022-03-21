@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddItemsToCart">
    <children>
       <VBox prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0">
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="button" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToMenu" style="-fx-background-color: None;" text="Our Menu">
+                  <Button minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToMenu" style="-fx-background-color:None;" text="Our Menu">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -25,7 +25,7 @@
                         <Insets left="30.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="160.0" mnemonicParsing="false" onAction="#navigateToOrder" style="-fx-background-color: None;" text="Order Now">
+                  <Button fx:id="button" minHeight="50.0" minWidth="160.0" mnemonicParsing="false" onAction="#navigateToOrder" style="-fx-background-color:None;" text="Order Now">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -33,7 +33,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color: None;" text="Special Deals">
+                  <Button fx:id="button" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color:None;" text="Special Deals">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -41,7 +41,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color: None;" text="FAQ">
+                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color:None;" text="FAQ">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -49,13 +49,13 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToAbout" style="-fx-background-color: None;" text="About Us">
+                  <Button fx:id="button" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToAbout" style="-fx-background-color:None;" text="About Us">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
                   <Pane prefHeight="200.0" prefWidth="200.0" />
-                  <Button fx:id="button" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#navigateToLogin" style="-fx-background-color: None;" text="Log in/Sign Up">
+                  <Button fx:id="button" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#navigateToLogin" style="-fx-background-color:None;" text="Log in/Sign Up">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
