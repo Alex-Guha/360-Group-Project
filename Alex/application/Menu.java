@@ -34,4 +34,67 @@ public class Menu {
 		Main m = new Main();
 		m.changeScene("Login.fxml");
 	}
+	
+	public void menuItem1(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem2(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem3(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem4(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	
+	public void menuItem5(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem6(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem7(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem8(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem9(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem10(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	
+	public void menuItem11(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
+	public void menuItem12(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Login.fxml");
+	}
+	
 }

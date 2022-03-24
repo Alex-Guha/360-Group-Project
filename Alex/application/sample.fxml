@@ -15,7 +15,7 @@
    <children>
       <VBox prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                <children>
                   <Button fx:id="button" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToMenu" style="-fx-background-color: None;" text="Our Menu">
                      <font>
@@ -70,7 +70,7 @@
                      <children>
                         <Label alignment="TOP_LEFT" text="Genshin Cafe">
                            <font>
-                              <Font name="Cambria" size="64.0" />
+                              <Font name="Candara" size="64.0" />
                            </font>
                            <VBox.margin>
                               <Insets left="50.0" />
@@ -144,12 +144,12 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
-                                 <HBox.margin>
-                                    <Insets left="90.0" top="10.0" />
-                                 </HBox.margin>
                                  <image>
                                     <Image url="@../images/paimon_logo.jpg" />
                                  </image>
+                                 <HBox.margin>
+                                    <Insets left="90.0" top="10.0" />
+                                 </HBox.margin>
                               </ImageView>
                               <Label prefHeight="24.0" prefWidth="124.0" text="GenshinCafe.com">
                                  <HBox.margin>
