@@ -1,4 +1,4 @@
-package Project;
+//package Project;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -8,16 +8,25 @@ public class Cart
 {
 	private int quantity;
 	private int productId;
-	private ArrayList<MenuItem> item = new ArrayList<MenuItem>();
+	private ArrayList<MenuItem> currentOrder;
+	
+	public Cart(int quantity, int productID, ArrayList<MenuItem> item) {
+		this.quantity = quantity;
+		this.productId = productID;
+		this.currentOrder = new ArrayList<MenuItem>();
+		
+	}
 	
 	public void addItem(MenuItem newItem)
 	{
-		item.add(newItem);
+		currentOrder.add(newItem);
+		System.out.println("\nNew item has been added");
+		
 	}
 	
 	public void removeItem(int newProductID)
 	{
-		ListIterator<MenuItem> iterator = item.listIterator();
+		ListIterator<MenuItem> iterator = currentOrder.listIterator();
 		
 		while(iterator.hasNext()) 
 		{
@@ -25,8 +34,8 @@ public class Cart
 			
 			if (itemCompare.getId() == newProductID)
 			{
-				item.remove(itemCompare);
-				
+				currentOrder.remove(itemCompare);
+				System.out.println("\n Item has been removed");
 				break;
 			}
 		}
@@ -34,7 +43,7 @@ public class Cart
 	
 	public void updateQuantity(int newProductID, int newQuantity)
 	{
-		ListIterator<MenuItem> iterator = item.listIterator();
+		ListIterator<MenuItem> iterator = currentOrder.listIterator();
 		
 		while(iterator.hasNext()) 
 		{
@@ -42,11 +51,15 @@ public class Cart
 			
 			if (itemCompare.getId() == newProductID)
 			{
+				int oldQuantity = itemCompare.getQuantity();
 				itemCompare.setQuantity(newQuantity);
 				
+				System.out.println("\nThe quantity " + Integer.toString(oldQuantity) + " has been changed to " + Integer.toString(newQuantity));
 				break;
 			}
 		}
 		
 	}
+	
+	
 }

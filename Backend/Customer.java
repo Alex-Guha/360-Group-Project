@@ -1,6 +1,6 @@
-package Project;
+//package Project;
 
-public class Customer // extends User
+public class Customer extends User// extends User
 {
 	String customerName;
 	String address;
@@ -8,8 +8,10 @@ public class Customer // extends User
 	double acctBalance;
 	Cart cart;
 	
-	public Customer(String customerName, String address, String cardInfo, double acctBalance, Cart cart)
+	public Customer(String customerName, String address, String cardInfo, double acctBalance, Cart cart, String passWord, String email)
 	{
+		super(false, customerName, passWord, email); //call constructor in User
+		
 		this.customerName = customerName;
 		this.address = address;
 		this.cardInfo = cardInfo;

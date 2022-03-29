@@ -13,7 +13,7 @@ public class User {
     private String userName;
     private String passWord;
     private String email;
-    //private int ID = 0; //id variable just for backend use, user will never see
+    
     
     
     //constructor
@@ -74,7 +74,10 @@ public class User {
     
   //isAdmin,username,password,email
     public boolean register(boolean isAdmin, String userName, String passWord, String email) { 
+    	
         String registeredUser = Boolean.toString(isAdmin) + ","  + userName + "," + passWord + "," + email;
+        
+        
         try {
             File userList = new File("UserList.txt");
             //String[] parseList = new String[];
@@ -108,6 +111,7 @@ public class User {
             System.out.println("An error occurred.");
             e.printStackTrace();
             return false;
+            
         } catch (IOException e) {
 			// TODO Auto-generated catch block
         	System.out.println("An error occurred.");
@@ -160,7 +164,7 @@ public class User {
     	         buffer.append(scan.nextLine()+System.lineSeparator());
     	      }
     	      String fileContents = buffer.toString();
-    	      System.out.println("Contents of the file: "+fileContents);
+    	      //System.out.println("Contents of the file: "+fileContents);
     	      //closing the Scanner object
     	      scan.close();
     	      String oldInfo = Boolean.toString(this.isAdmin) + ","  + this.userName + "," + this.passWord + "," + this.email;
