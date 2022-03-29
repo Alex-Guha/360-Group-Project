@@ -10,7 +10,7 @@ public class SpecialDeals {
 	private String ImageLink;
 	
 	
-	public SpecialDeals(int id, String name, float price, ArrayList<MenuItem> menuItems, int percentage, String ImageLink) {
+	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
 		// TODO Auto-generated constructor stub
 		
 		this.id = id;
@@ -21,6 +21,17 @@ public class SpecialDeals {
 		this.ImageLink = ImageLink;
 	}
 	
+	
+	
+		public void addMenuItem(MenuItem item) {
+			
+			menuItems.add(item);
+		}
+		
+		public void removeMenuItem(MenuItem item) {
+			
+			menuItems.remove(item.getId());
+		}
 	
 	//setter methods
 		public void setId(int id) {
@@ -86,9 +97,14 @@ public class SpecialDeals {
 		}
 		
 		//toString
-		public String toString() {
+		public String toString() { //i avoid using the built-in arraylist tostring function so if you see that please fix it future zack
 			String result = "";
-			result += "\n" + Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(percentage) + "," + menuItems.toString() + "," + ImageLink + "\n";
+			result += Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(percentage) + ","; // + menuItems.toString() 
+			for(int o = 0; o < menuItems.size(); o++) {
+  	    	  
+  	    	  result += menuItems.get(o).toString();
+  	        }
+			result += "," + ImageLink + "\n";
 			return result;
 		}
 		

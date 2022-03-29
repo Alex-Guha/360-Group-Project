@@ -9,12 +9,20 @@ public class Cart
 	private int quantity;
 	private int productId;
 	private ArrayList<MenuItem> currentOrder;
+	private Deals dealList;
 	
-	public Cart(int quantity, int productID, ArrayList<MenuItem> item) {
+	public Cart(int quantity, int productID, ArrayList<SpecialDeals> dealList) {
 		this.quantity = quantity;
 		this.productId = productID;
 		this.currentOrder = new ArrayList<MenuItem>();
+		this.dealList = new Deals(dealList);
 		
+	}
+	
+	
+	public ArrayList<MenuItem> getCurrentOrder(){
+		
+		return this.currentOrder;
 	}
 	
 	public void addItem(MenuItem newItem)
@@ -54,11 +62,23 @@ public class Cart
 				int oldQuantity = itemCompare.getQuantity();
 				itemCompare.setQuantity(newQuantity);
 				
-				System.out.println("\nThe quantity " + Integer.toString(oldQuantity) + " has been changed to " + Integer.toString(newQuantity));
+				System.out.println("\nThe quantity " + Integer.toString(oldQuantity) + " has been changed to " + Integer.toString(newQuantity) + "\n");
 				break;
 			}
 		}
 		
+	}
+	
+	public float calculateTotal() {
+		float total = 0;
+		
+		for(int i = 0; i < this.currentOrder.size(); i++) {
+			
+			total += this.currentOrder.get(i).getPrice() * dealList.findDeal(currentOrder.get(i));
+		}
+		
+		
+		return total;
 	}
 	
 	

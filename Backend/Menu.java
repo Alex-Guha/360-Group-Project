@@ -38,14 +38,17 @@ public class Menu
 		
 	}
 	
-	public void getList()
+	public ArrayList<MenuItem> getList()
 	{
+		/*
 		ListIterator<MenuItem> iterator = menuList.listIterator();
 		while(iterator.hasNext())
 		{
 			MenuItem item = iterator.next();
 			System.out.println(item);
-		}
+		} */
+		
+		return menuList;
 	}
 	
 	public void addItem(MenuItem newItem)
@@ -78,7 +81,7 @@ public class Menu
             //begin writing to file if no duplicates
             if(!duplicate) {
                 FileWriter myWriter = new FileWriter(userList);
-                myWriter.write("\n" + newItem.toString() + "\n");
+                myWriter.write(newItem.toString());
                 myWriter.close();
             }
             
@@ -94,7 +97,7 @@ public class Menu
 			e.printStackTrace();
 		}
 		
-		System.out.println("Item has been succesfully added!");
+		System.out.println("\nItem has been succesfully added!\n");
 	}
 	
 	public void removeItem(int id)
@@ -140,7 +143,7 @@ public class Menu
     	      //System.out.println("Contents of the file: "+fileContents);
     	      //closing the Scanner object
     	      scan.close();
-    	      String oldInfo = "\n" + Integer.toString(id) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + 
+    	      String oldInfo = Integer.toString(id) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + 
     	      Integer.toString(temp.getQuantity()) + "," + temp.getImageLink() + "\n";
     	      String newLine = "";
     	      //Replacing the old line with new line

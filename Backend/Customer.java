@@ -7,6 +7,7 @@ public class Customer extends User// extends User
 	String cardInfo;
 	double acctBalance;
 	Cart cart;
+	Menu menu;
 	
 	public Customer(String customerName, String address, String cardInfo, double acctBalance, Cart cart, String passWord, String email)
 	{
@@ -17,16 +18,24 @@ public class Customer extends User// extends User
 		this.cardInfo = cardInfo;
 		this.acctBalance = acctBalance;
 		this.cart = cart;
+		menu = new Menu();
 	}
 	
-	public void editCart(String action, int menuPrice)
+	public void addToCart(MenuItem item)
 	{
 		// what do i do here again ???
+		cart.addItem(item);
+		
+	}
+	
+	public void removeItemCart(MenuItem item) {
+		
+		cart.removeItem(item.getId());
 	}
 	
 	public String viewCartDetails()
 	{
-		return "The cart containing ... has a total of ...";
+		return "The cart containing " + menu.getList().toString() + " has a total of " + Float.toString(cart.calculateTotal()) + "\n";
 	}
 	
 	public void checkOut()

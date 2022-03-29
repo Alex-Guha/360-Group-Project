@@ -102,7 +102,7 @@ public class User {
             //begin writing to file if no duplicates
             if(!duplicate) {
                 FileWriter myWriter = new FileWriter(userList);
-                myWriter.write("\n" + registeredUser + "\n");
+                myWriter.write(registeredUser + "\n");
                 myWriter.close();
             }
             

@@ -75,7 +75,7 @@ public class MenuItem extends Menu
 	//toString
 	public String toString() {
 		String result = "";
-		result += "\n" + Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(quantity) + "," + imageLink + "\n";
+		result += Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(quantity) + "," + imageLink + "\n";
 		return result;
 	}
 	
