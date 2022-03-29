@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class Deals extends SpecialDeals{
+public class Deals{
 	
-	private ArrayList<SpecialDeals> deals = new ArrayList<SpecialDeals>();
+	private ArrayList<SpecialDeals> deals; // = new ArrayList<SpecialDeals>();
 
 	public Deals(ArrayList<SpecialDeals> deals, int id, String name, float price, ArrayList<MenuItem> menuItems, int percentage, String ImageLink) {
 		// TODO Auto-generated constructor stub
-		super(id, name, price, menuItems, percentage, ImageLink);
+		//super(id, name, price, menuItems, percentage, ImageLink);
 		this.deals = new ArrayList<SpecialDeals>();
 	}
 	

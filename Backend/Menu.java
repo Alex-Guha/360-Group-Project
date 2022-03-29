@@ -67,7 +67,7 @@ public class Menu
                 String[] parse = data.split(",");
                 if (parse[0].equals(Integer.toString(newItem.getId()))) {
                
-                    System.out.println("Username already taken");
+                    System.out.println("\nItem already added");
                     duplicate = true;
                     //return false;
                 }
@@ -99,6 +99,8 @@ public class Menu
 	
 	public void removeItem(int id)
 	{
+		
+		MenuItem temp = null;
 		boolean removed = false;
 		ListIterator<MenuItem> iterator = menuList.listIterator();
 		
@@ -107,15 +109,60 @@ public class Menu
 			MenuItem item = iterator.next();
 			if (item.getId() == id)
 			{
+				temp = item;
 				menuList.remove(item);
 				removed = true;
 			}
 		}
 		
-		if (removed)
+		if (removed) {
 			System.out.println("Item has been succesfully removed!");
-		else
-			System.out.println("Item not found");
+		
+		}
+		else {
+			System.out.println("Item not found");	
+			return;
+		}
+		
+		
+		try {
+    		//Instantiating the File class
+    	      //String filePath = "D://input.txt";
+    	      //Instantiating the Scanner class to read the file
+    	      Scanner scan = new Scanner(new File("MenuItems.txt"));
+    	      //instantiating the StringBuffer class
+    	      StringBuffer buffer = new StringBuffer();
+    	      //Reading lines of the file and appending them to StringBuffer
+    	      while (scan.hasNextLine()) {
+    	         buffer.append(scan.nextLine()+System.lineSeparator());
+    	      }
+    	      String fileContents = buffer.toString();
+    	      //System.out.println("Contents of the file: "+fileContents);
+    	      //closing the Scanner object
+    	      scan.close();
+    	      String oldInfo = "\n" + Integer.toString(id) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + 
+    	      Integer.toString(temp.getQuantity()) + "," + temp.getImageLink() + "\n";
+    	      String newLine = "";
+    	      //Replacing the old line with new line
+    	      fileContents = fileContents.replaceAll(oldInfo, newLine);
+    	      //instantiating the FileWriter class
+    	      FileWriter writer = new FileWriter("MenuItems.txt");
+    	      //System.out.println("");
+    	      //System.out.println("new data: "+fileContents);
+    	      writer.append(fileContents);
+    	      writer.flush();
+    	      writer.close();
+    		} catch(IOException e) {
+    			e.printStackTrace();
+    			System.out.println("something went wrong :(");
+    		}
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	

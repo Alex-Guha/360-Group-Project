@@ -20,5 +20,77 @@ public class SpecialDeals {
 		this.percentage = percentage;
 		this.ImageLink = ImageLink;
 	}
+	
+	
+	//setter methods
+		public void setId(int id) {
+			this.id = id;
+			
+		}
+		
+		public void setName(String name) {
+			this.name = name;
+			
+		}
+		
+		public void setPrice(float price) {
+			this.price = price;
+			
+		}
+		
+		public void setMenuItems(ArrayList<MenuItem> menuItems) {
+			this.menuItems = menuItems;
+			
+		}
+		
+		public void setPercentage(int percentage)
+		{
+			this.percentage = percentage;
+		}
+		
+		public void setImageLink(String imageLink) {
+			this.ImageLink = imageLink;
+			
+		}
+		
+		
+		//getter methods
+		public int getId()
+		{
+			return id;
+		}
+		
+		public String getName()
+		{
+			return name;
+		}
+		
+		public float getPrice()
+		{
+			return price;
+		}
+		
+		public ArrayList<MenuItem> getMenuItems() {
+			
+			return menuItems;
+		}
+		
+		public int getPercentage() {
+			
+			return percentage;
+		}
+		
+		public String getImageLink() {
+			
+			return ImageLink;
+		}
+		
+		//toString
+		public String toString() {
+			String result = "";
+			result += "\n" + Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(percentage) + "," + menuItems.toString() + "," + ImageLink + "\n";
+			return result;
+		}
+		
 
 }

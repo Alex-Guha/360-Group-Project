@@ -173,8 +173,8 @@ public class User {
     	      fileContents = fileContents.replaceAll(oldInfo, newLine);
     	      //instantiating the FileWriter class
     	      FileWriter writer = new FileWriter("UserList.txt");
-    	      System.out.println("");
-    	      System.out.println("new data: "+fileContents);
+    	      //System.out.println("");
+    	      //System.out.println("new data: "+fileContents);
     	      writer.append(fileContents);
     	      writer.flush();
     	      writer.close();
