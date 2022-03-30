@@ -158,16 +158,33 @@ public class Menu
     		} catch(IOException e) {
     			e.printStackTrace();
     			System.out.println("something went wrong :(");
-    		}
-		
-		
-		
-		
-		
-		
+    		}	
 		
 	}
 	
+	public void findItem(int id)
+	{
+		MenuItem temp = null;
+		boolean found = false;
+		ListIterator<MenuItem> iterator = menuList.listIterator();
+		
+		while(iterator.hasNext())
+		{
+			MenuItem item = iterator.next();
+			if (item.getId() == id)
+			{
+				temp = item;
+			}
+		}
+		
+		if (found) {
+			System.out.println("Price of " + temp.getName() + " is " + temp.getPrice());
+		
+		}
+		else {
+			System.out.println("Item not found");
+		}
+	}
 	
 	public String toString() {
 		String result = "";
