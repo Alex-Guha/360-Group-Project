@@ -10,7 +10,7 @@ public class SpecialDeals {
 	private String ImageLink;
 	
 	
-	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
+/*	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
 		// TODO Auto-generated constructor stub
 		
 		this.id = id;
@@ -19,18 +19,19 @@ public class SpecialDeals {
 		this.menuItems = new ArrayList<MenuItem>();
 		this.percentage = percentage;
 		this.ImageLink = ImageLink;
-	}
+	} */ // use MenuItems object
 	
-	
-	
+
 		public void addMenuItem(MenuItem item) {
 			
 			menuItems.add(item);
+			System.out.println("\nItem has been succesfully added!\n");
 		}
 		
-		public void removeMenuItem(MenuItem item) {
+		public void removeMenuItem(int id) {
 			
-			menuItems.remove(item.getId());
+			menuItems.remove(id);
+			System.out.println("Item has been succesfully removed!");
 		}
 	
 	//setter methods
