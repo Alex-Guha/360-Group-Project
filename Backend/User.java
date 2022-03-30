@@ -16,7 +16,7 @@ public class User {
     
     
     
-    //constructor
+    /*constructor
     public User(boolean isAdmin, String userName, String passWord, String email) {
     	this.isAdmin = isAdmin;
     	this.loggedIn = false;
@@ -25,7 +25,7 @@ public class User {
     	this.email = email;
     	
     }
-
+*/	// removed constructor (JENNA)
 
     //class methods
     
