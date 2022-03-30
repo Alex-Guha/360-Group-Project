@@ -69,7 +69,7 @@ public class Cart
 		
 	}
 	
-	public float calculateTotal() {
+	public float calcTotal() {
 		float total = 0;
 		
 		for(int i = 0; i < this.currentOrder.size(); i++) {
@@ -81,5 +81,8 @@ public class Cart
 		return total;
 	}
 	
-	
+	public void checkOut()
+	{
+		System.out.println("Order Completed!");
+	}
 }
