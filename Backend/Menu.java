@@ -27,14 +27,15 @@ public class Menu
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] parse = data.split(",");
-                menuList.add(new MenuItem(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), parse[4]));
+                MenuItem newItem = new MenuItem(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), parse[4]);
+                menuList.add(newItem);
             }
 
             myReader.close();
            
     	} catch(FileNotFoundException e) { //in case we mess up and there is no file
     		e.printStackTrace();
-    	}
+    	} 
 		
 	}
 	
@@ -80,7 +81,7 @@ public class Menu
 
             //begin writing to file if no duplicates
             if(!duplicate) {
-                FileWriter myWriter = new FileWriter(userList);
+                FileWriter myWriter = new FileWriter(userList, true);
                 myWriter.write(newItem.toString());
                 myWriter.close();
             }
@@ -118,14 +119,7 @@ public class Menu
 			}
 		}
 		
-		if (removed) {
-			System.out.println("Item has been succesfully removed!");
 		
-		}
-		else {
-			System.out.println("Item not found");	
-			return;
-		}
 		
 		
 		try {
@@ -155,6 +149,20 @@ public class Menu
     	      writer.append(fileContents);
     	      writer.flush();
     	      writer.close();
+    	      
+    	      
+    	      
+    	      if (removed) {
+    				System.out.println("Item has been succesfully removed!");
+    			
+    			}
+    			else {
+    				System.out.println("Item not found");	
+    				return;
+    			}
+    	      
+    	      
+    	      
     		} catch(IOException e) {
     			e.printStackTrace();
     			System.out.println("something went wrong :(");
@@ -162,7 +170,7 @@ public class Menu
 		
 	}
 	
-	public void findItem(int id)
+	public MenuItem findItem(int id)
 	{
 		MenuItem temp = null;
 		boolean found = false;
@@ -174,6 +182,7 @@ public class Menu
 			if (item.getId() == id)
 			{
 				temp = item;
+				found = true;
 			}
 		}
 		
@@ -184,6 +193,7 @@ public class Menu
 		else {
 			System.out.println("Item not found");
 		}
+		return temp;
 	}
 	
 	public String toString() {

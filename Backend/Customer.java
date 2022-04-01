@@ -35,7 +35,7 @@ public class Customer extends User// extends User
 	
 	public String viewCartDetails()
 	{
-		return "The cart containing " + menu.getList().toString() + " has a total of " + Float.toString(cart.calculateTotal()) + "\n";
+		return "The cart containing " + menu.getList().toString() + " has a total of " + Float.toString(cart.calcTotal()) + "\n";
 	}
 	
 	public void checkOut()

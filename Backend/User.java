@@ -16,7 +16,7 @@ public class User {
     
     
     
-    /*constructor
+    //constructor
     public User(boolean isAdmin, String userName, String passWord, String email) {
     	this.isAdmin = isAdmin;
     	this.loggedIn = false;
@@ -25,7 +25,24 @@ public class User {
     	this.email = email;
     	
     }
-*/	// removed constructor (JENNA)
+    
+    public User(String userName, String passWord, String email) {
+    	this.isAdmin = false;
+    	this.loggedIn = false;
+    	this.userName = userName;
+    	this.passWord = passWord;
+    	this.email = email;
+    }
+    
+    public User() {
+    	this.isAdmin = false;
+    	this.loggedIn = false;
+    	this.userName = "";
+    	this.passWord = "";
+    	this.email = "";
+    	
+    }
+	// removed constructor (JENNA)
 
     //class methods
     
@@ -48,6 +65,11 @@ public class User {
     public String getEmail() {
     	
     	return this.email;
+    }
+    
+    public boolean getLoggedIn() {
+    	
+    	return this.loggedIn;
     }
     
     
@@ -101,7 +123,7 @@ public class User {
 
             //begin writing to file if no duplicates
             if(!duplicate) {
-                FileWriter myWriter = new FileWriter(userList);
+                FileWriter myWriter = new FileWriter(userList, true);
                 myWriter.write(registeredUser + "\n");
                 myWriter.close();
             }
@@ -131,6 +153,9 @@ public class User {
                 String[] parse = data.split(",");
                 if (parse[1].equals(username)) {
                 	if(parse[2].equals(password) ) {
+                		if(Boolean.parseBoolean(parse[0])) {
+                			this.isAdmin = true;
+                		}
                 		this.loggedIn = true;
                 		return true;
                 	}
@@ -189,9 +214,7 @@ public class User {
     
     public void logOut() {
     	
-    	if(this.loggedIn) {
-    		this.loggedIn = false;
-    	}
+    	this.loggedIn = false;
     }
     
     

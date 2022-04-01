@@ -1,6 +1,6 @@
 //package Project;
 
-public class MenuItem extends Menu
+public class MenuItem
 {
 	private int id;
 	private String name;
@@ -10,7 +10,7 @@ public class MenuItem extends Menu
 	
 	public MenuItem(int id, String name, float price, int quantity, String imageLink) {
 		// TODO Auto-generated constructor stub
-		super();
+		//super();
 		this.id = id;
 		this.name = name;
 		this.price = price;

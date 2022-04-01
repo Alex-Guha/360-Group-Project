@@ -1,9 +1,11 @@
-package Project;
+//package Project;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
+import java.util.ArrayList;
+
 
 public class Driver
 {
@@ -18,10 +20,17 @@ public class Driver
 	    boolean isAdmin = false;
 
 		//create objects to be used in this method.
+	    //SpecialDeals sDeals =new SpecialDeals(2, "Grug Goop Celebration", 11.11F, 90, "", 30);
+	   //ArrayList<SpecialDeals> dealsList = new ArrayList<SpecialDeals>();
+	    Deals deals = new Deals();
+	    //deals.addItem(sDeals);
 	    User user = new User();
-	    Cart cart = new Cart();
+	    Cart cart = new Cart(2, 123);
 	    Menu menu = new Menu();
-	    SpecialDeals sDeals = new SpecialDeals();
+	    
+	    MenuItem water = new MenuItem(0, "Water", 0.00f, 1, "");
+	    
+	    //SpecialDeals sDeals = new SpecialDeals();
 	    
 		try
 		{
@@ -44,9 +53,9 @@ public class Driver
 		  switch (input1)
 		   {
 		    case 'A':   //1. Log In
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
-		    		System.out.print("Already logged in, please log out if a new user.");
+		    		System.out.print("Already logged in, please log out if a new user.\n");
 		    	}
 		    	
 		    	else
@@ -63,9 +72,9 @@ public class Driver
 		      break;
 		      
 		    case 'B':   //2. Sign Up
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
-		    		System.out.print("Already logged in, please log out if a new user.");
+		    		System.out.print("Already logged in, please log out if a new user.\n");
 		    	}
 		    	
 		    	else
@@ -80,23 +89,48 @@ public class Driver
 			      String email = stdin.readLine().trim();
 			      
 			      System.out.print("If admin, please enter code, otherwise type NULL:\n");
-				  inputInfo = stdin.readLine().trim();
-				  int adminCode = Integer.parseInt(inputInfo);
-			      
-				  // set admin code so admins making accounts can be verified
-			      if (adminCode == 1111) // example code is '1111'
-			      {
-			    	  isAdmin = true;
+			      try {
+			    	   inputInfo = stdin.readLine().trim();
+					  int adminCode = Integer.parseInt(inputInfo);
+				      
+					  // set admin code so admins making accounts can be verified
+				      if (adminCode == 1111) // example code is '1111'
+				      {
+				    	  isAdmin = true;
+				      } else {
+				    	  isAdmin = false;
+				      }
+				      
+				      loggedIn = user.register(isAdmin, username, password, email);
+			    	  
+			      } catch(NumberFormatException e) {
+			    	  System.out.println("Code not valid, registering as Customer\n");
+			    	  isAdmin = false;
+			    	  loggedIn = user.register(isAdmin, username, password, email);
+			    	  
 			      }
-			      
-			      loggedIn = user.register(isAdmin, username, password, email);
+				 
 		    	}
 		      break;
 		      
 		    case 'C':   //3. Add Item to Cart
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
 		    		// user clicks button to "add item" in the UI
+		    		//cart.addItem(water); // TEST      DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+		    		System.out.print("Please enter the id of a food to add\n");
+				    inputInfo = stdin.readLine().trim();
+				    int id = Integer.parseInt(inputInfo);
+				    MenuItem temp = menu.findItem(id);
+				    
+				    if(temp != null) {
+				    	cart.addItem(temp);
+			    		System.out.println(cart.toString());
+				    	
+				    	
+				    }
+				    
+				    
 		    	}
 		    	
 		    	else
@@ -105,13 +139,15 @@ public class Driver
 		    	}
 		      break;
 		    case 'D':   //4. Remove Item From Cart
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
 		    		// user clicks button to "remove item" in the UI
 				    System.out.print("Please enter the id of a string to remove:\n");
 				    inputInfo = stdin.readLine().trim();
 				    int id = Integer.parseInt(inputInfo);
 				    cart.removeItem(id);
+		    		System.out.println(cart.toString());
+
 		    	}
 		    	
 		    	else
@@ -121,7 +157,7 @@ public class Driver
 		      break;
 		      
 		    case 'E':  // 5. Update Quantity
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
 		    		// user clicks button to "remove item" in the UI
 				    System.out.print("Please enter the id of a string to remove:\n");
@@ -141,7 +177,7 @@ public class Driver
 		        break;
 		        
 		    case 'F':   // View Menu
-		    	menu.getList();
+		    	System.out.println(menu.toString());
 			      break;
 			      
 		    case 'G':   //6. Get Item Price
@@ -149,18 +185,18 @@ public class Driver
 			    inputInfo = stdin.readLine().trim();
 			    int id = Integer.parseInt(inputInfo);
 			    
-			    menu.findItem(id);
+			    System.out.println(Integer.toString(menu.findItem(id).getId()));
 			    
 		      break;
 		      
 		    case 'H':  //7. View Special Deals
-		    	sDeals.getMenuItems();
+		    	System.out.println(deals.displayDeals());
 		        break;
 		       
 		    case 'I':   //Get Cart Total
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
-		    		cart.calcTotal();
+		    		System.out.println(Float.toString(cart.calcTotal()));
 		    	}
 		    	else
 		    	{
@@ -169,7 +205,7 @@ public class Driver
 			      break;
 			      
 		    case 'J':   // Checkout
-		    	if (loggedIn)
+		    	if (user.getLoggedIn())
 		    	{
 		    		cart.checkOut();
 		    	}
@@ -183,18 +219,18 @@ public class Driver
 			// admin cases
 			      
 		    case 'K':	// Add Item to Menu
-		    	if (isAdmin)
+		    	if (user.getIsAdmin())
 		    	{
 				      System.out.print("Please enter item ID:\n");
 					  inputInfo = stdin.readLine().trim();
-					  int id = Integer.parseInt(inputInfo);
+					  id = Integer.parseInt(inputInfo);
 				      
 				      System.out.print("Please enter item name:\n");
 				      String name = stdin.readLine().trim();
 				      
 				      System.out.print("Please enter item price:\n");
 				      inputInfo = stdin.readLine().trim();
-					  int price = Integer.parseInt(inputInfo);
+					  float price = Float.parseFloat(inputInfo);
 				      
 				      System.out.print("Please enter image for item:\n");
 				      String imageLink = stdin.readLine().trim();
@@ -210,11 +246,11 @@ public class Driver
 			      break;
 			      
 		    case 'L':	//Remove Item from Menu
-		    	if (isAdmin)
+		    	if (user.getIsAdmin())
 		    	{
 				     System.out.print("Please enter item ID:\n");
 				     inputInfo = stdin.readLine().trim();
-				     int id = Integer.parseInt(inputInfo);
+				     id = Integer.parseInt(inputInfo);
 				     
 				     menu.removeItem(id);
 		    	}
@@ -225,25 +261,29 @@ public class Driver
 			      break;
 			      
 		    case 'M':	// Add Item to Special Deals
-		    	if (isAdmin)
+		    	if (user.getIsAdmin())
 		    	{
-				      System.out.print("Please enter item ID:\n");
+				      System.out.print("Please enter Item ID:\n");
 					  inputInfo = stdin.readLine().trim();
-					  int id = Integer.parseInt(inputInfo);
+					  id = Integer.parseInt(inputInfo);
 				      
 				      System.out.print("Please enter item name:\n");
 				      String name = stdin.readLine().trim();
 				      
 				      System.out.print("Please enter item price:\n");
 				      inputInfo = stdin.readLine().trim();
-					  int price = Integer.parseInt(inputInfo);
+					  float price = Float.parseFloat(inputInfo);
 				      
 				      System.out.print("Please enter image for item:\n");
 				      String imageLink = stdin.readLine().trim();
 				      
-				      MenuItem newItem = new MenuItem(id, name, price, 0, imageLink);
+				      System.out.print("Please enter Discount pergentage (percent that gets knocked off):\n");
+					  inputInfo = stdin.readLine().trim();
+					  int discount = Integer.parseInt(inputInfo);
 				      
-				      sDeals.addMenuItem(newItem);
+				     SpecialDeals newDeal = new SpecialDeals(id, name, price, 1, discount, imageLink);
+				      
+				      deals.addItem(newDeal);
 		    	}
 		    	else
 		    	{
@@ -252,20 +292,30 @@ public class Driver
 			      break;
 			      
 		    case 'N':	// Remove Item from Special Deals
-		    	if (isAdmin)
+		    	if (user.getIsAdmin())
 		    	{
 				     System.out.print("Please enter item ID:\n");
 				     inputInfo = stdin.readLine().trim();
-				     int id = Integer.parseInt(inputInfo);
+				     id = Integer.parseInt(inputInfo);
 				     
-				     sDeals.removeMenuItem(id);
+				     
+				     deals.removeItem(id);
 		    	}
 		    	else
 		    	{
 		    		System.out.print("You do not have access to this action\n");
 		    	}
 			      break;
+			      
+		    case 'Z':
+		    	if(user.getLoggedIn()) {
+		    		user.logOut();
+		    		System.out.println("Successfully Logged out\n");
+		    	} else {
+		    		
+		    		System.out.println("Not logged in\n");
 
+		    	}
 		    case 'Q':   //Quit
 		      break;
 
@@ -308,6 +358,7 @@ public class Driver
 	             "L\t\tRemove Item from Menu\n" +
 	             "M\t\tAdd Item to Special Deals\n" +
 	             "N\t\tRemove Item from Special Deals\n" +
+	             "Z\t\tLog Out\n" + 
 	             "Q\t\tQuit\n" +
 	             "?\t\tDisplay Help\n\n");
 	} //end of printMenu()

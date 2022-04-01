@@ -9,7 +9,7 @@ public class Deals{
 	
 	private ArrayList<SpecialDeals> deals; // = new ArrayList<SpecialDeals>();
 
-	public Deals(ArrayList<SpecialDeals> deals) {
+	public Deals() {
 		// TODO Auto-generated constructor stub
 		//super(id, name, price, menuItems, percentage, ImageLink);
 		this.deals = new ArrayList<SpecialDeals>();
@@ -22,20 +22,17 @@ public class Deals{
 		//followed by several lines of MenuItems that the deal applies to
 		try { 
     		File userList = new File("DealsList.txt");
-    		SpecialDeals newDeal = null;
+    		//SpecialDeals newDeal = null;
     		
     		Scanner myReader = new Scanner(userList);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] parse = data.split(",");
-                if(parse[0].equals("NewDeal")) {
-                	newDeal = new SpecialDeals(Integer.parseInt(parse[1]), parse[2], Float.parseFloat(parse[3]), Integer.parseInt(parse[4]), parse[5]);
+              
+                SpecialDeals newDeal = new SpecialDeals(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), Integer.parseInt(parse[4]), parse[5]);
                 deals.add(newDeal);
                 	
-                } else {
-                	
-                	newDeal.getMenuItems().add(new MenuItem(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), parse[4]));
-                }
+               
                 
                 
             }
@@ -68,10 +65,11 @@ public class Deals{
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] parse = data.split(",");
-                if (parse[1].equals(Integer.toString(newDeal.getId()))) {
+                if (parse[0].equals(Integer.toString(newDeal.getId()))) {
                
                     System.out.println("\nItem already added\n");
                     duplicate = true;
+                    return;
                     //return false;
                 }
             }
@@ -80,12 +78,9 @@ public class Deals{
 
             //begin writing to file if no duplicates
             if(!duplicate) {
-                FileWriter myWriter = new FileWriter(userList);
+                FileWriter myWriter = new FileWriter(userList, true);
                 myWriter.write(newDeal.toString());
-                for(int i = 0; i < newDeal.getMenuItems().size(); i++) {
-                	
-                	myWriter.write(newDeal.getMenuItems().get(i).toString());
-                }
+                
                 myWriter.close();
             }
             
@@ -106,9 +101,9 @@ public class Deals{
 	
 	
 	public void removeItem(int i) {
-		this.deals.remove(i);
+		//this.deals.remove(deals.indexOf(this.getbyID(i)));
 		
-		SpecialDeals temp = null;
+		SpecialDeals temp = this.getbyID(i);
 		boolean removed = false;
 		ListIterator<SpecialDeals> iterator = deals.listIterator();
 		
@@ -120,17 +115,11 @@ public class Deals{
 				temp = item;
 				deals.remove(item);
 				removed = true;
+				break;
 			}
 		}
 		
-		if (removed) {
-			System.out.println("\nItem has been succesfully removed!\n");
 		
-		}
-		else {
-			System.out.println("\nItem not found\n");	
-			return;
-		}
 		
 		
 		try {
@@ -148,12 +137,10 @@ public class Deals{
     	      //System.out.println("Contents of the file: "+fileContents);
     	      //closing the Scanner object
     	      scan.close();
-    	      String oldInfo = Integer.toString(i) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + 
-    	      Integer.toString(temp.getPercentage()) + "," + temp.getImageLink() + "\n"; //temp.getMenuItems().toString();
-    	      for(int o = 0; o < temp.getMenuItems().size(); o++) {
-    	    	  
-    	    	  oldInfo += temp.getMenuItems().get(o).toString();
-    	      }
+    	      String oldInfo = Integer.toString(temp.getId()) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + Integer.toString(temp.getQuantity()) + 
+    					"," + Integer.toString(temp.getPercentage()) + "," + temp.getImageLink() + "\n"; // + menuItems.toString() 
+    			 //temp.getMenuItems().toString();
+    	      
     	      String newLine = "";
     	      //Replacing the old line with new line
     	      fileContents = fileContents.replaceAll(oldInfo, newLine);
@@ -164,16 +151,29 @@ public class Deals{
     	      writer.append(fileContents);
     	      writer.flush();
     	      writer.close();
+    	      
+    	      
+    	      if (removed) {
+    				System.out.println("\nItem has been succesfully removed!\n");
+    			
+    			}
+    			else {
+    				System.out.println("\nItem not found\n");	
+    				return;
+    			}
+    	      
+    	      
+    	      
     		} catch(IOException e) {
     			e.printStackTrace();
     			System.out.println("something went wrong :(");
     		}
 	}
 	
-	
+	/*
 	public float findDeal(MenuItem item) {
 		ArrayList<Integer> discounts = new ArrayList<Integer>();
-		float markoff = 0;
+		float markoff = 1;
 		
 		for(int i = 0; i < this.deals.size(); i++) {
 			
@@ -185,9 +185,42 @@ public class Deals{
 			}
 		}
 		
-		markoff = Collections.min(discounts);
+		if(discounts.size() > 0) {
+			markoff = Collections.min(discounts);
+
+			
+		}
 		
 		return markoff;
+	}*/
+	public SpecialDeals getbyID(int id) {
+		//SpecialDeals result = null;
+		
+		for(int i = 0; i < deals.size(); i++) {
+			
+			//System.out.println(deals.get(i).getId());
+			//System.out.println(id);
+
+			
+			if(this.deals.get(i).getId() == id) {
+				//System.out.print("hi");
+				return this.deals.get(i);
+				
+			}
+		}
+		
+		return null;
+		
+	}
+	
+	public String displayDeals() {
+		String result = "";
+		for(int i = 0; i < deals.size(); i ++) {
+			
+			result += deals.get(i).toString() + "\n";
+		}
+		return result;
+		
 	}
 
 }

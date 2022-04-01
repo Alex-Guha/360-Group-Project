@@ -1,16 +1,40 @@
 import java.util.ArrayList;
 
-public class SpecialDeals {
+public class SpecialDeals extends MenuItem {
 
-	private int id;
-	private String name;
-	private float price;
-	private ArrayList<MenuItem> menuItems;
-	private int percentage;
-	private String ImageLink;
+	//private int id;
+	//private String name;
+	//private float price;
+	//private ArrayList<MenuItem> menuItems;
+	private int DiscountPercent;
+	//private String ImageLink;
 	
 	
-/*	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
+	
+	public SpecialDeals(int id, String name, float price, int quantity,  int DiscountPercent, String imageLink) {
+		
+		super(id, name, price, quantity, imageLink);
+		this.DiscountPercent = DiscountPercent;
+	}
+	
+	public int getPercentage() {
+		
+		return DiscountPercent;
+	}
+	
+	public String toString() { //i avoid using the built-in arraylist tostring function so if you see that please fix it future zack
+		String result = "";
+		result += Integer.toString(super.getId()) + "," + super.getName() + "," + Float.toString(super.getPrice()) + "," + Integer.toString(super.getQuantity()) + 
+				"," + Integer.toString(DiscountPercent) + "," + super.getImageLink() + "\n"; // + menuItems.toString() 
+		
+		//result += ;
+		return result;
+	}
+	
+	
+	
+	/*
+	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
 		// TODO Auto-generated constructor stub
 		
 		this.id = id;
@@ -19,7 +43,7 @@ public class SpecialDeals {
 		this.menuItems = new ArrayList<MenuItem>();
 		this.percentage = percentage;
 		this.ImageLink = ImageLink;
-	} */ // use MenuItems object
+	}  // use MenuItems object
 	
 
 		public void addMenuItem(MenuItem item) {
@@ -96,18 +120,23 @@ public class SpecialDeals {
 			
 			return ImageLink;
 		}
-		
+		*/
+	
+	
 		//toString
-		public String toString() { //i avoid using the built-in arraylist tostring function so if you see that please fix it future zack
+		
+		
+		/*public String toStringPeople() { //i avoid using the built-in arraylist tostring function so if you see that please fix it future zack
 			String result = "";
-			result += Integer.toString(id) + "," + name + "," + Float.toString(price) + "," + Integer.toString(percentage) + ","; // + menuItems.toString() 
+			result +="ID: " + Integer.toString(id) + ",\n" + "Deal Name: " + name + ",\n" + "Price: " + Float.toString(price) + ",\n" + 
+			"Percentage Off: " + Integer.toString(percentage) + ",\n" + ImageLink + "\nApplies to the following items: \n"; // + menuItems.toString() 
 			for(int o = 0; o < menuItems.size(); o++) {
   	    	  
   	    	  result += menuItems.get(o).toString();
   	        }
 			result += "," + ImageLink + "\n";
 			return result;
-		}
+		}*/
 		
 
 }
