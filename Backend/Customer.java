@@ -23,7 +23,7 @@ public class Customer extends User// extends User
 	
 	public void addToCart(MenuItem item)
 	{
-		// what do i do here again ???
+		
 		cart.addItem(item);
 		
 	}
@@ -41,5 +41,6 @@ public class Customer extends User// extends User
 	public void checkOut()
 	{
 		// link to order 
+		//this method is mainly up to javafx
 	}
 }

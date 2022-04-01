@@ -98,6 +98,8 @@ public class Cart
 	}
 	
 	public float calcTotal() {
+		//this method searches the deals list and cart for matching ids. If ids match,then replace the item with 
+		//a deal during the calculation process
 		float total = 0;
 		
 		for(int i = 0; i < this.currentOrder.size(); i++) {
@@ -115,11 +117,11 @@ public class Cart
 				
 			}
 			
-			if(match) {
+			if(match) { //case if there is a deal
 				
 				SpecialDeals replacement = dealList.getbyID(referenceID);
 				total += replacement.getPrice() * ((100 - replacement.getPercentage()) / 100) * referenceQuantity;
-			} else {
+			} else { //case otherwise, calculate as normal
 				
 				total += this.currentOrder.get(i).getPrice() * this.currentOrder.get(i).getQuantity();
 			}
@@ -128,6 +130,7 @@ public class Cart
 		
 		return total;
 	}
+	
 	
 	public void checkOut()
 	{

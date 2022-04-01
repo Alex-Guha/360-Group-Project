@@ -43,6 +43,7 @@ public class User {
     	
     }
 	// removed constructor (JENNA)
+    //replace constructor and made 2 more lol (ZACK)
 
     //class methods
     
@@ -96,6 +97,7 @@ public class User {
     
   //isAdmin,username,password,email
     public boolean register(boolean isAdmin, String userName, String passWord, String email) { 
+    	//checks textfile for matching data. If not, adds user data at next available line
     	
         String registeredUser = Boolean.toString(isAdmin) + ","  + userName + "," + passWord + "," + email;
         
@@ -144,6 +146,8 @@ public class User {
     }
 
     public boolean login(String username, String password) {
+    	//checks if username and password match that of the textfile. If so, change the loggedIn 
+    	//boolean to true for this user object
     	try {
     		File userList = new File("UserList.txt");
     		
@@ -176,6 +180,7 @@ public class User {
     }
     
     public void updateProfile(String username, String password, String email) {
+    	//similar to the remove methods in Deals and Menu, this replaces instances of old, incorrect data with updated data 
     	if(this.loggedIn == true) {
     		try {
     		//Instantiating the File class

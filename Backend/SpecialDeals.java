@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class SpecialDeals extends MenuItem {
+public class SpecialDeals extends MenuItem { //the way deals work is that there are a list of menuitems with an extra parameter. this extra parameter
+	//acts as the percent to be marked off. The deal items are identical to menuItems, ids included. At the time of calculating prices,
+	//the special deal replaces the meal.
 
 	//private int id;
 	//private String name;
@@ -10,7 +12,7 @@ public class SpecialDeals extends MenuItem {
 	//private String ImageLink;
 	
 	
-	
+	//constructor
 	public SpecialDeals(int id, String name, float price, int quantity,  int DiscountPercent, String imageLink) {
 		
 		super(id, name, price, quantity, imageLink);
@@ -32,7 +34,7 @@ public class SpecialDeals extends MenuItem {
 	}
 	
 	
-	
+	//There was some major remodeling with the deals classes so ignore this
 	/*
 	public SpecialDeals(int id, String name, float price, int percentage, String ImageLink) {
 		// TODO Auto-generated constructor stub

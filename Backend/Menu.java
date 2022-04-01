@@ -103,6 +103,7 @@ public class Menu
 	
 	public void removeItem(int id)
 	{
+		//remove item from arraylist
 		
 		MenuItem temp = null;
 		boolean removed = false;
@@ -122,7 +123,7 @@ public class Menu
 		
 		
 		
-		
+		//remove from textfile too
 		try {
     		//Instantiating the File class
     	      //String filePath = "D://input.txt";

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.lang.Object;
 import java.util.*;
 
-public class Deals{
+public class Deals{ //container class for an arraylist of specialdeals
 	
 	private ArrayList<SpecialDeals> deals; // = new ArrayList<SpecialDeals>();
 
@@ -18,7 +18,7 @@ public class Deals{
 		//this.menuList = new ArrayList<MenuItem>();
 		
 		//read menuItems text file to automatically populate the deals
-		//text file is formatted as NewDeal,id,name,price,percentage,imageLink
+		//text file is formatted as id,name,price,quantity,percentage,imageLink
 		//followed by several lines of MenuItems that the deal applies to
 		try { 
     		File userList = new File("DealsList.txt");
@@ -50,6 +50,7 @@ public class Deals{
 		
 	}
 	
+	//adds an item to the arraylist AND the textfile
 	public void addItem(SpecialDeals newDeal) {
 		this.deals.add(newDeal);
 		
@@ -65,7 +66,7 @@ public class Deals{
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] parse = data.split(",");
-                if (parse[0].equals(Integer.toString(newDeal.getId()))) {
+                if (parse[0].equals(Integer.toString(newDeal.getId()))) { //if id in text file = id newDeal
                
                     System.out.println("\nItem already added\n");
                     duplicate = true;
@@ -107,6 +108,7 @@ public class Deals{
 		boolean removed = false;
 		ListIterator<SpecialDeals> iterator = deals.listIterator();
 		
+		//remove from arrayList
 		while(iterator.hasNext())
 		{
 			SpecialDeals item = iterator.next();
@@ -193,7 +195,7 @@ public class Deals{
 		
 		return markoff;
 	}*/
-	public SpecialDeals getbyID(int id) {
+	public SpecialDeals getbyID(int id) { //input is an id and funxtion returns corresponding SpecialDeal object 
 		//SpecialDeals result = null;
 		
 		for(int i = 0; i < deals.size(); i++) {
@@ -213,7 +215,7 @@ public class Deals{
 		
 	}
 	
-	public String displayDeals() {
+	public String displayDeals() { //toString
 		String result = "";
 		for(int i = 0; i < deals.size(); i ++) {
 			
