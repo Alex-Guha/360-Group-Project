@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddItemsToCart">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddItemsToCart">
    <children>
       <VBox prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0">
          <children>
@@ -64,39 +64,65 @@
                      </HBox.margin>
                   </Button>
                </children></HBox>
+            <Label alignment="TOP_LEFT" text="Genshin Cafe">
+               <font>
+                  <Font name="Cambria" size="64.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="This item has been added to your cart">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+            </Label>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox prefHeight="345.0" prefWidth="550.0">
+                  <VBox prefHeight="338.0" prefWidth="584.0">
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
                      <children>
-                        <Label alignment="TOP_LEFT" text="Genshin Cafe">
+                        <Label text="Item: ">
                            <font>
-                              <Font name="Cambria" size="64.0" />
+                              <Font name="Bodoni MT" size="36.0" />
                            </font>
                            <VBox.margin>
-                              <Insets left="50.0" />
+                              <Insets bottom="15.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="TOP_LEFT" text="Our spring menu is here!">
+                        <Pane fx:id="itemName" minHeight="200.0" minWidth="100.0" prefHeight="305.0" prefWidth="584.0">
                            <VBox.margin>
-                              <Insets left="65.0" />
+                              <Insets bottom="20.0" />
                            </VBox.margin>
+                        </Pane>
+                        <Button mnemonicParsing="false" text="Add another food item">
                            <font>
-                              <Font name="Ink Free" size="24.0" />
+                              <Font size="18.0" />
                            </font>
-                        </Label>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Checkout">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
                      </children>
+                  </VBox>
+                  <VBox prefHeight="345.0" prefWidth="550.0">
                      <HBox.margin>
                         <Insets top="50.0" />
                      </HBox.margin>
                   </VBox>
-                  <ImageView fitHeight="400.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/first.jpg" />
-                     </image>
-                     <HBox.margin>
-                        <Insets right="30.0" top="30.0" />
-                     </HBox.margin>
-                  </ImageView>
                </children>
                <VBox.margin>
                   <Insets top="30.0" />
