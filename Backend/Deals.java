@@ -138,7 +138,7 @@ public class Deals{
     	      //closing the Scanner object
     	      scan.close();
     	      String oldInfo = Integer.toString(temp.getId()) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + Integer.toString(temp.getQuantity()) + 
-    					"," + Integer.toString(temp.getPercentage()) + "," + temp.getImageLink() + "\n"; // + menuItems.toString() 
+    					"," + Integer.toString(temp.getPercentage()) + "," + temp.getImageLink(); // + menuItems.toString() 
     			 //temp.getMenuItems().toString();
     	      
     	      String newLine = "";

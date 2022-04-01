@@ -116,6 +116,7 @@ public class Menu
 				temp = item;
 				menuList.remove(item);
 				removed = true;
+				break;
 			}
 		}
 		
@@ -138,7 +139,7 @@ public class Menu
     	      //closing the Scanner object
     	      scan.close();
     	      String oldInfo = Integer.toString(id) + "," + temp.getName() + "," + Float.toString(temp.getPrice()) + "," + 
-    	      Integer.toString(temp.getQuantity()) + "," + temp.getImageLink() + "\n";
+    	      Integer.toString(temp.getQuantity()) + "," + temp.getImageLink();
     	      String newLine = "";
     	      //Replacing the old line with new line
     	      fileContents = fileContents.replaceAll(oldInfo, newLine);
