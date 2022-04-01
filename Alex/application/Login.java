@@ -5,6 +5,8 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.control.Label;
 
 public class Login {
 	@FXML
@@ -25,6 +27,11 @@ public class Login {
 		m.changeScene("SpecialDeals.fxml");
 	}
 	
+	public void navigateToFAQ(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("FAQ.fxml");
+	}
+	
 	public void navigateToAbout(ActionEvent event) throws IOException {
 		Main m = new Main();
 		m.changeScene("AboutUs.fxml");
@@ -33,5 +40,19 @@ public class Login {
 	public void navigateToLogin(ActionEvent event) throws IOException {
 		Main m = new Main();
 		m.changeScene("Login.fxml");
+	}
+
+
+	/**
+	* body functions
+	*/
+	public void navigateToOurMenu(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("Menu.fxml");
+	}
+
+	public void navigateToSignUp(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("SignUp.fxml");
 	}
 }

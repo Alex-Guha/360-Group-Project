@@ -25,6 +25,11 @@ public class Payment {
 		m.changeScene("SpecialDeals.fxml");
 	}
 	
+	public void navigateToFAQ(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("FAQ.fxml");
+	}
+	
 	public void navigateToAbout(ActionEvent event) throws IOException {
 		Main m = new Main();
 		m.changeScene("AboutUs.fxml");

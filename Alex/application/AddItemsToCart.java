@@ -18,7 +18,7 @@ public class AddItemsToCart {
 	public void initialize() {
 		 /*Label label = new Label("dango milk");
 		 itemName.getChildren().add(label);*/
-		Label label = new Label(currentOrder.getLastOrderedItem());
+		Label label = new Label("TEST TEST TEST"); //currentOrder.getLastOrderedItem()
 		itemName.getChildren().add(label);
 	}
 	
@@ -35,6 +35,11 @@ public class AddItemsToCart {
 	public void navigateToDeals(ActionEvent event) throws IOException {
 		Main m = new Main();
 		m.changeScene("SpecialDeals.fxml");
+	}
+	
+	public void navigateToFAQ(ActionEvent event) throws IOException {
+		Main m = new Main();
+		m.changeScene("FAQ.fxml");
 	}
 	
 	public void navigateToAbout(ActionEvent event) throws IOException {

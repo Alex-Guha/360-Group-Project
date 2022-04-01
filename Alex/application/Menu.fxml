@@ -43,7 +43,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color:None;" text="FAQ">
+                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToFAQ" style="-fx-background-color:None;" text="FAQ">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>

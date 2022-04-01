@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +18,7 @@
    <children>
       <VBox prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1280.0">
                <children>
                   <Button minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#navigateToMenu" style="-fx-background-color:None;" text="Our Menu">
                      <font>
@@ -41,7 +44,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToDeals" style="-fx-background-color:None;" text="FAQ">
+                  <Button fx:id="button" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#navigateToFAQ" style="-fx-background-color:None;" text="FAQ">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -64,46 +67,102 @@
                      </HBox.margin>
                   </Button>
                </children></HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="487.0" prefWidth="1280.0">
                <children>
-                  <VBox prefHeight="345.0" prefWidth="550.0">
-                     <children>
-                        <Label alignment="TOP_LEFT" text="Genshin Cafe">
-                           <font>
-                              <Font name="Cambria" size="64.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets left="50.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" text="Our spring menu is here!">
-                           <VBox.margin>
-                              <Insets left="65.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Ink Free" size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
+                  <Accordion />
+                  <ScrollPane minHeight="400.0" prefHeight="9987.0" prefWidth="1157.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1050.0" prefWidth="1155.0" style="-fx-background-color: lightgray;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="19.0" prefHeight="48.0" prefWidth="1117.0" text="Frequently Asked Questions" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="50.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutY="82.0" prefHeight="793.0" prefWidth="1156.0">
+                                 <children>
+                                    <Label text="Q. How do I order?">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField text="        A. First, make an account! Once you're signed up, you can look at the menu and add all the yummy foods to your cart.">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <HBox prefHeight="40.0" prefWidth="1158.0" />
+                                    <Label prefHeight="26.0" prefWidth="346.0" text="Q. How did Genshin Cafe' come to life?">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField text="        A. Great question! This place was a result of passion of three Genshin Impact players and their friends (who were overruled).">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <HBox prefHeight="40.0" prefWidth="1158.0" />
+                                    <Label prefHeight="26.0" prefWidth="346.0" text="Q. How fresh is your food?">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField text="        A. Everything we send out is made-to-order only using the freshest ingredients.">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <HBox prefHeight="40.0" prefWidth="1158.0" />
+                                    <Label prefHeight="26.0" prefWidth="507.0" text="Q. Can I cancel an order after I've submitted it?">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField text="        A. Unfortunately, once you've placed an order its immediately sent to our kitchen to ensure the food you get will be finished as">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField prefWidth="1158.0" text="soon as possible. If you really need to cancel, call our customer support team at (333) 333 - 3333 for alternatives">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <HBox prefHeight="40.0" prefWidth="1158.0" />
+                                    <Label prefHeight="26.0" prefWidth="507.0" text="Q. Can I eat Paimon?">
+                                       <font>
+                                          <Font name="Bell MT" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="73.0" prefWidth="1139.0">
+                                       <children>
+                                          <TextField prefHeight="41.0" prefWidth="162.0" text="        A. Naniii?">
+                                             <font>
+                                                <Font name="Bell MT" size="21.0" />
+                                             </font>
+                                          </TextField>
+                                          <ImageView fitHeight="75.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-08-02%20at%2016.23.14.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
                      <HBox.margin>
-                        <Insets top="50.0" />
+                        <Insets bottom="10.0" left="50.0" top="10.0" />
                      </HBox.margin>
-                  </VBox>
-                  <ImageView fitHeight="400.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/first.jpg" />
-                     </image>
-                     <HBox.margin>
-                        <Insets right="30.0" top="30.0" />
-                     </HBox.margin>
-                  </ImageView>
+                  </ScrollPane>
                </children>
                <VBox.margin>
-                  <Insets top="30.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="82.0" prefWidth="1280.0" />
-            <HBox prefHeight="184.0" prefWidth="1280.0" style="-fx-background-color: E8E8E8;">
+                  <Insets top="10.0" />
+               </VBox.margin></HBox>
+            <HBox maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="1280.0" style="-fx-background-color: E8E8E8;" VBox.vgrow="ALWAYS">
                <children>
                   <VBox prefHeight="135.0" prefWidth="410.0">
                      <children>
@@ -148,7 +207,7 @@
                                     <Insets left="90.0" top="10.0" />
                                  </HBox.margin>
                                  <image>
-                                    <Image url="@../images/paimon_logo.jpg" />
+                                    <Image url="@iamges/paimon_logo.jpg" />
                                  </image>
                               </ImageView>
                               <Label prefHeight="24.0" prefWidth="124.0" text="GenshinCafe.com">
@@ -180,7 +239,7 @@
                            <children>
                               <ImageView fitHeight="53.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/twitter.png" />
+                                    <Image url="@iamges/twitter.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets />
@@ -188,7 +247,7 @@
                               </ImageView>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/instagram.png" />
+                                    <Image url="@iamges/instagram.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -196,7 +255,7 @@
                               </ImageView>
                               <ImageView fitHeight="56.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/facebook.png" />
+                                    <Image url="@iamges/facebook.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -210,6 +269,9 @@
                      </children>
                   </VBox>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>
