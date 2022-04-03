@@ -1,8 +1,10 @@
 package application;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import Backend.Customer;
@@ -31,6 +33,22 @@ public class SignUp {
 
 	@FXML
 	private PasswordField Password2;
+	
+	private Customer user;
+	
+	public void initialize() {
+		try {
+			FileInputStream fi = new FileInputStream(new File("userInfo.txt"));
+			ObjectInputStream oi = new ObjectInputStream(fi);
+			
+			user = (Customer) oi.readObject();
+			
+			oi.close();
+			fi.close();
+		} catch (Exception e) {
+			//System.out.println("User is not logged in");
+		}
+	}
 	
 	public void navigateToMenu(ActionEvent event) throws IOException {
 		Main m = new Main();
@@ -69,8 +87,6 @@ public class SignUp {
 			String username = Username.getText();
 			String password = Password.getText();
 			String password2 = Password2.getText();
-			
-			Customer user = new Customer();
 			
 			if(email.equals(email2) && !email.isEmpty()) {
 				if(password.equals(password2) && !password.isEmpty()) {

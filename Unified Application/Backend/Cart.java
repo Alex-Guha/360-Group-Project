@@ -92,7 +92,7 @@ public class Cart implements Serializable{
 			int referenceQuantity = 0;
 			//total += this.currentOrder.get(i).getPrice() * dealList.findDeal(currentOrder.get(i)) * this.currentOrder.get(i).getQuantity();
 			
-			for(int o = 0; o < dealList.getList().size() || o < this.currentOrder.size(); o++) {
+			for(int o = 0; o < dealList.getList().size(); o++) {
 				if(this.currentOrder.get(i).getId() == dealList.getList().get(o).getId()) {
 					match = true;
 					referenceID = this.currentOrder.get(i).getId();
