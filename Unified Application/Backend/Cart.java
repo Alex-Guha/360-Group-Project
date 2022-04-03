@@ -1,30 +1,36 @@
 package Backend;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
 
-public class Cart {
+public class Cart implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private int quantity;
 	private ArrayList<MenuItem> currentOrder;
 	private Deals dealList;
+	private MenuItem lastChanged;
 	
 	public Cart() {
 		this.quantity = 0;
 		this.currentOrder = new ArrayList<MenuItem>();
 		this.dealList = new Deals();
-		
+		lastChanged = null;
 	}
 	
 	// UNUSED
 	public void setCurrentOrder(ArrayList<MenuItem> currentOrder) {
 		this.currentOrder = currentOrder;
-		
 	}
 	
 	// UNUSED
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
+	}
+	
+	public MenuItem lastAdded() {
+		return lastChanged;
 	}
 	
 	public ArrayList<MenuItem> getCurrentOrder(){
@@ -37,6 +43,7 @@ public class Cart {
 	
 	public void addItem(MenuItem newItem) {
 		currentOrder.add(newItem);
+		lastChanged = newItem;
 		quantity++;
 		//System.out.println("\nNew item has been added");
 	}
@@ -49,6 +56,7 @@ public class Cart {
 			
 			if (itemCompare.getId() == newProductID) {
 				currentOrder.remove(itemCompare);
+				lastChanged = itemCompare;
 				quantity--;
 				//System.out.println("\n Item has been removed");
 				break;

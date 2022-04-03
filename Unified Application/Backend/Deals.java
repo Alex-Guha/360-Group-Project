@@ -4,10 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.*;
 
-public class Deals { //container class for an arraylist of specialdeals
-	
+public class Deals implements Serializable{ //container class for an arraylist of specialdeals
+	private static final long serialVersionUID = 1L;
 	private ArrayList<SpecialDeals> deals; // = new ArrayList<SpecialDeals>();
 
 	public Deals() {
@@ -28,6 +29,8 @@ public class Deals { //container class for an arraylist of specialdeals
     		Scanner myReader = new Scanner(userList);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
+                if(data.isBlank() || data.isEmpty())
+                	continue;
                 String[] parse = data.split(",");
               
                 SpecialDeals newDeal = new SpecialDeals(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), Integer.parseInt(parse[4]), parse[5]);

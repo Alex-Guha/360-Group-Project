@@ -82,26 +82,27 @@
                                  <children>
                                     <HBox prefHeight="300.0" prefWidth="1164.0">
                                        <children>
-                                          <VBox prefHeight="300.0" prefWidth="391.0">
+                                          <VBox minHeight="300.0" minWidth="400.0">
                                              <children>
                                                 <Label prefHeight="70.0" prefWidth="402.0" text="Items List:">
                                                    <font>
                                                       <Font name="Bodoni MT" size="21.0" />
                                                    </font>
                                                 </Label>
+                                                <Pane fx:id="itemListPane" prefHeight="200.0" prefWidth="200.0" />
                                              </children>
                                           </VBox>
                                           <ImageView fitHeight="305.0" fitWidth="455.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/if433z798cl71.png" />
+                                                <Image url="@../images/AboutUs21.png" />
                                              </image>
                                              <HBox.margin>
-                                                <Insets left="310.0" />
+                                                <Insets left="290.0" />
                                              </HBox.margin>
                                           </ImageView>
                                        </children>
                                     </HBox>
-                                    <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="146.0" text="CHECKOUT">
+                                    <Button onAction="#checkout" mnemonicParsing="false" prefHeight="59.0" prefWidth="146.0" text="CHECKOUT">
                                        <font>
                                           <Font name="Bell MT Bold" size="16.0" />
                                        </font>

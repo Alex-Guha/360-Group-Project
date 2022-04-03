@@ -14,7 +14,7 @@ public class Customer implements Serializable {
 	String address;
 	String cardInfo;
 	double acctBalance;
-	Cart cart;
+	public Cart cart;
 	public String Username;
 	public boolean isLoggedIn = false;
 	
@@ -31,7 +31,7 @@ public class Customer implements Serializable {
 		this.address = "";
 		this.cardInfo = "";
 		this.acctBalance = 0;
-		this.cart = null;
+		this.cart = new Cart();
 	}
 	
 	public void initialize(String customerName, String address, String cardInfo, double acctBalance, Cart cart) {

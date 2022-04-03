@@ -15,6 +15,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 import Backend.Customer;
+import Backend.MenuItem;
 
 
 public class OrderNow {
@@ -48,46 +49,29 @@ public class OrderNow {
 		} catch (Exception e) {
 			//System.out.println("User is not logged in");
 		}
-		
-		VBox orderDisplay = new VBox();
-		// currentOrder customerOrder[] = customerCart.getCurrentOrder();
-		ArrayList<String> customerOrder = new ArrayList<String>();
-		customerOrder.add("TEST TEST TEST 123");
-		customerOrder.add("TEST TEST TEST 456");
-		customerOrder.add("TEST TEST TEST 789");
-		for(int i = 0; i < customerOrder.size() ; i++) {
-			HBox hBox = new HBox();
-			Label menuItem = new Label(customerOrder.get(i)); // customerOrder[i].getName()
-			hBox.getChildren().add(menuItem);
-			Label quantity = new Label("Quantity: " + 3); // customerOrder[i].getQuantity()
-			hBox.getChildren().add(quantity);
-			Button remove = new Button("Remove");
-			hBox.getChildren().add(remove);
-			orderDisplay.getChildren().add(hBox);
+		try {
+			VBox orderDisplay = new VBox();
+			ArrayList<MenuItem> customerOrder = user.getOrder();
 			
-			//totalPrice = (float) customerOrder[i].getQuantity() * customerOrder[i].getPrice();
-			totalPrice = ((float) 3) * 4.99;
+			for(int i = 0; i < customerOrder.size() ; i++) {
+				HBox hBox = new HBox();
+				Label menuItem = new Label(customerOrder.get(i).getName());
+				hBox.getChildren().add(menuItem);
+				Label quantity = new Label("Quantity: " + customerOrder.get(i).getQuantity());
+				hBox.getChildren().add(quantity);
+				Button remove = new Button("Remove");
+				hBox.getChildren().add(remove);
+				orderDisplay.getChildren().add(hBox);
+				
+				totalPrice += (float) customerOrder.get(i).getQuantity() * customerOrder.get(i).getPrice();
+			}
+			
+			Label total = new Label("Order Total: " + totalPrice);
+			orderDisplay.getChildren().add(total);
+			orderPane.getChildren().add(orderDisplay);
+		} catch(NullPointerException e) {
+			//System.out.println("Nothing in cart");
 		}
-		Label total = new Label("Order Total: " + totalPrice);
-		orderDisplay.getChildren().add(total);
-		orderPane.getChildren().add(orderDisplay);
-		
-		/*VBox orderDisplay = new VBox();
-		HBox hBox = new HBox();
-		Label menuItem = new Label("dango milk");
-		hBox.getChildren().add(menuItem);
-		Label quantity = new Label("Quantity: 1");
-		hBox.getChildren().add(quantity);
-		Button remove = new Button("Remove");
-		hBox.getChildren().add(remove);
-		orderDisplay.getChildren().add(hBox);
-			
-		totalPrice = 1.00;
-		Label total = new Label("Order Total: $" + totalPrice);
-		orderDisplay.getChildren().add(total);
-		orderPane.getChildren().add(orderDisplay);*/
-		
-		
 	}
 	
 	

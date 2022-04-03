@@ -144,7 +144,7 @@
                                           </TextField>
                                           <ImageView fitHeight="75.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-08-02%20at%2016.23.14.png" />
+                                                <Image url="@../images/AboutUs20.png" />
                                              </image>
                                           </ImageView>
                                        </children>
@@ -207,7 +207,7 @@
                                     <Insets left="90.0" top="10.0" />
                                  </HBox.margin>
                                  <image>
-                                    <Image url="@iamges/paimon_logo.jpg" />
+                                    <Image url="@../images/paimon_logo.jpg" />
                                  </image>
                               </ImageView>
                               <Label prefHeight="24.0" prefWidth="124.0" text="GenshinCafe.com">
@@ -239,7 +239,7 @@
                            <children>
                               <ImageView fitHeight="53.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@iamges/twitter.png" />
+                                    <Image url="@../images/twitter.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets />
@@ -247,7 +247,7 @@
                               </ImageView>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@iamges/instagram.png" />
+                                    <Image url="@../images/instagram.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -255,7 +255,7 @@
                               </ImageView>
                               <ImageView fitHeight="56.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@iamges/facebook.png" />
+                                    <Image url="@../images/facebook.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="30.0" />

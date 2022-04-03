@@ -69,25 +69,34 @@
                </children></HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="487.0" prefWidth="1280.0">
                <children>
-                  <Accordion />
-                  <ScrollPane minHeight="0.0" prefHeight="480.0" prefWidth="1170.0">
+                  <Accordion prefWidth="0.0" />
+                  <ScrollPane minHeight="400.0" prefHeight="2341.0" prefWidth="1168.0">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1050.0" prefWidth="1155.0" style="-fx-background-color: white;">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2313.0" prefWidth="1163.0" style="-fx-background-color: white;">
                            <children>
                               <Label alignment="CENTER" layoutX="84.0" prefHeight="48.0" prefWidth="993.0" text="ABOUT GENSHIN CAFE" textAlignment="CENTER">
                                  <font>
-                                    <Font name="Cambria Bold" size="18.0" />
+                                    <Font name="Cambria Bold" size="24.0" />
                                  </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
                               </Label>
                               <VBox layoutX="771.0" layoutY="52.0" prefHeight="423.0" prefWidth="38.0" />
                               <VBox layoutX="809.0" layoutY="52.0" prefHeight="423.0" prefWidth="266.0">
                                  <children>
-                                    <ImageView fitHeight="430.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="616.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@iamges/aboutus/Image%20Pasted%202022-11-02%20at%2018.14.46.png" />
+                                          <Image url="@../images/AboutUs24.png" />
                                        </image>
+                                       <VBox.margin>
+                                          <Insets top="-1.0" />
+                                       </VBox.margin>
                                     </ImageView>
                                  </children>
+                                 <padding>
+                                    <Insets left="-10.0" />
+                                 </padding>
                               </VBox>
                               <VBox layoutX="84.0" layoutY="52.0" prefHeight="428.0" prefWidth="682.0">
                                  <children>
@@ -95,53 +104,199 @@
                                        <children>
                                           <ImageView fitHeight="292.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-11-02%20at%2018.18.35.png" />
+                                                <Image url="@../images/AboutUs27.png" />
                                              </image>
                                           </ImageView>
-                                          <VBox prefHeight="267.0" prefWidth="42.0" />
                                           <ImageView fitHeight="246.0" fitWidth="502.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-11-02%20at%2018.12.13.png" />
+                                                <Image url="@../images/AboutUs22.png" />
                                              </image>
+                                             <HBox.margin>
+                                                <Insets left="40.0" />
+                                             </HBox.margin>
                                           </ImageView>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="46.0" prefWidth="366.0">
-                                       <children>
-                                          <VBox prefHeight="180.0" prefWidth="180.0" />
                                        </children>
                                     </HBox>
                                     <HBox prefHeight="134.0" prefWidth="682.0">
                                        <children>
-                                          <VBox prefHeight="150.0" prefWidth="180.0" />
-                                          <ImageView fitHeight="149.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="72.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-11-02%20at%2018.13.08.png" />
+                                                <Image url="@../images/AboutUs26.png" />
                                              </image>
+                                             <HBox.margin>
+                                                <Insets left="150.0" top="-15.0" />
+                                             </HBox.margin>
                                           </ImageView>
-                                          <VBox prefHeight="150.0" prefWidth="42.0" />
-                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="278.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@iamges/aboutus/Image%20Pasted%202022-08-02%20at%2015.44.12.png" />
+                                                <Image url="@../images/AboutUs23.png" />
                                              </image>
+                                             <HBox.margin>
+                                                <Insets left="-50.0" top="55.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="284.0" fitWidth="432.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs25.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="-10.0" top="-20.0" />
+                                             </HBox.margin>
                                           </ImageView>
                                        </children>
                                     </HBox>
                                  </children>
                               </VBox>
-                              <VBox layoutX="101.0" layoutY="506.0" prefHeight="798.0" prefWidth="974.0">
+                              <VBox layoutX="101.0" layoutY="506.0" prefHeight="1830.0" prefWidth="1069.0">
                                  <children>
                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="975.0" text="We believe in the fantasy world" textAlignment="JUSTIFY">
                                        <font>
-                                          <Font name="Arial Black" size="14.0" />
+                                          <Font name="Arial Black" size="16.0" />
                                        </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
                                     </Label>
-                                    <TextArea prefHeight="118.0" prefWidth="974.0" text="Since 2020, we've been into a new life over the world called Teyvat of Mihoyo. Explore Vast Area, &#10;Encounter Powerful Enemies, and Discover Secrets of an Unknown World. A land of &#10;Elements Lies Before You, Begin an Unforgettable Journey to Unviel Its Secrets.&#10;Genshin Impact inspires us to put our visualization into reality&#10;Come visit us and enjoy our food with fellow weebs">
+                                    <TextArea prefHeight="118.0" prefWidth="974.0" text="                                                                      Since 2020, we've been into a new life over the world called Teyvat of Mihoyo. Explore Vast Area, &#10;                                                                                 Encounter Powerful Enemies, and Discover Secrets of an Unknown World. A land of &#10;                                                                                      Elements Lies Before You, Begin an Unforgettable Journey to Unviel Its Secrets.&#10;                                                                                          Genshin Impact inspires us to put our visualization into reality&#10;                                                                                                    Come visit us and enjoy our food with fellow weebs.">
                                        <font>
-                                          <Font name="Calibri" size="12.0" />
+                                          <Font name="Berlin Sans FB" size="15.0" />
                                        </font>
+                                       <VBox.margin>
+                                          <Insets left="-100.0" top="5.0" />
+                                       </VBox.margin>
                                     </TextArea>
+                                    <ImageView fitHeight="460.0" fitWidth="644.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/AboutUs21.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="166.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="483.0" fitWidth="669.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/AboutUs28.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="166.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="975.0" text="For weebs, by weebs" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Arial Black" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea prefHeight="118.0" prefWidth="974.0" text="                                                                      We're a small, tight-knit team focused on making genshin impact Genshin-merchandise products as foods and drinks.&#10;                                                                                 We've committed ourself in building a company of multi-talented individuals so that&#10;                                                                                         we can bring joys to our customers who have common interests in fantasy world.&#10;                                                                                                 No need to be shy, come and let's have fun!!!&#10;">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="-90.0" top="5.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="220.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs29.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="220.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs30.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="140.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="205.0" fitWidth="196.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs31.jpg" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="140.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Yumeko Hirano">
+                                             <font>
+                                                <Font name="Calisto MT Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="110.0" top="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Xin Hwei Lim">
+                                             <font>
+                                                <Font name="Calisto MT Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="220.0" top="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Alexander Guha">
+                                             <font>
+                                                <Font name="Calisto MT Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="230.0" top="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="220.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs33.jpg" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="230.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <ImageView fitHeight="212.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/AboutUs32.JPG" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="140.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Jenna Cooley">
+                                             <font>
+                                                <Font name="Calisto MT Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="270.0" top="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Thanh Hoa">
+                                             <font>
+                                                <Font name="Calisto MT Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="240.0" top="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <padding>
+                                    <Insets top="40.0" />
+                                 </padding>
                               </VBox>
                            </children>
                         </AnchorPane>
@@ -199,7 +354,7 @@
                                     <Insets left="90.0" top="10.0" />
                                  </HBox.margin>
                                  <image>
-                                    <Image url="@iamges/paimon_logo.jpg" />
+                                    <Image url="@../images/paimon_logo.jpg" />
                                  </image>
                               </ImageView>
                               <Label prefHeight="24.0" prefWidth="124.0" text="GenshinCafe.com">

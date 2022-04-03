@@ -5,6 +5,7 @@ public class SpecialDeals extends MenuItem {
 	//acts as the percent to be marked off. The deal items are identical to menuItems, ids included. At the time of calculating prices,
 	//the special deal replaces the meal.
 
+	private static final long serialVersionUID = 1L;
 	private int DiscountPercent;
 	
 	//constructor

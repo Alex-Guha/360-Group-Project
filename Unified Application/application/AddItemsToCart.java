@@ -41,10 +41,13 @@ public class AddItemsToCart {
 			//System.out.println("User is not logged in");
 		}
 		
-		 /*Label label = new Label("dango milk");
-		 itemName.getChildren().add(label);*/
-		Label label = new Label("TEST TEST TEST"); //currentOrder.getLastOrderedItem()
-		itemName.getChildren().add(label);
+		try {
+			
+			Label label = new Label(user.cart.lastAdded().getName());
+			itemName.getChildren().add(label);
+		} catch(NullPointerException e) {
+			System.out.println("AddItemsToCart had an error - userInfo is empty somehow?");
+		}
 	}
 	
 	public void navigateToMenu(ActionEvent event) throws IOException {

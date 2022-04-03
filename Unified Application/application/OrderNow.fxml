@@ -87,7 +87,7 @@
                      <children>
                         <ScrollPane prefHeight="295.0" prefWidth="650.0">
                            <content>
-                              <Pane fx:id="orderPane" prefHeight="445.0" prefWidth="630.0" />
+                              <Pane fx:id="orderPane" minHeight="290.0" prefWidth="630.0" />
                            </content>
                         </ScrollPane>
                         <Button mnemonicParsing="false" onAction="#navigateToPaymentPage" text="Check Out">
