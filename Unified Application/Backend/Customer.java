@@ -34,12 +34,11 @@ public class Customer implements Serializable {
 		this.cart = new Cart();
 	}
 	
-	public void initialize(String customerName, String address, String cardInfo, double acctBalance, Cart cart) {
+	public void initialize(String customerName, String address, String cardInfo) {
 		this.customerName = customerName;
 		this.address = address;
 		this.cardInfo = cardInfo;
-		this.acctBalance = acctBalance;
-		this.cart = cart;
+		this.acctBalance = 0;
 	}
 	
 	public void addToCart(MenuItem item) {
@@ -73,7 +72,7 @@ public class Customer implements Serializable {
         
         
         try {
-            File userList = new File(getClass().getResource("userList.txt").toURI());
+            File userList = new File(getClass().getResource("UserList.txt").toURI());
             //String[] parseList = new String[];
 
             //check for duplicates in text file based on username
@@ -124,7 +123,7 @@ public class Customer implements Serializable {
 
     public boolean login(String username, String password) {
     	try {
-    		File userList = new File((getClass().getResource("userList.txt")).toURI());
+    		File userList = new File(getClass().getResource("UserList.txt").toURI());
     		
     		Scanner myReader = new Scanner(userList);
             while (myReader.hasNextLine()) {

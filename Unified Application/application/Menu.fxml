@@ -83,12 +83,12 @@
                                  <children>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/1.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Sweet Dream">
                                                    <font>
@@ -124,12 +124,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/3.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Udon Noodles">
                                                    <font>
@@ -153,7 +153,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button1" mnemonicParsing="false" onAction="#menuItem3" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem3" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -165,12 +165,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/5.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="319.0" text="Butter Crab">
                                                    <font>
@@ -194,7 +194,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button2" mnemonicParsing="false" onAction="#menuItem5" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem5" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -206,12 +206,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/7.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="317.0" text="Sashimi Platter">
                                                    <font>
@@ -235,7 +235,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button3" mnemonicParsing="false" onAction="#menuItem7" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem7" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -247,12 +247,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/9.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Berry &amp; Mint Burst">
                                                    <font>
@@ -276,7 +276,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button4" mnemonicParsing="false" onAction="#menuItem9" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem9" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -288,12 +288,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/11.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="317.0" text="Rice Pudding">
                                                    <font>
@@ -317,7 +317,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button5" mnemonicParsing="false" onAction="#menuItem11" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem11" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -333,12 +333,12 @@
                                  <children>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/2.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Crystal Shrimp">
                                                    <font>
@@ -362,7 +362,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button1" mnemonicParsing="false" onAction="#menuItem2" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem2" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -374,12 +374,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/4.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="317.0" text="Braised Meat">
                                                    <font>
@@ -403,7 +403,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button11" mnemonicParsing="false" onAction="#menuItem4" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem4" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -415,12 +415,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/6.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="317.0" text="Victorious Legend">
                                                    <font>
@@ -444,7 +444,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button21" mnemonicParsing="false" onAction="#menuItem6" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem6" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -456,12 +456,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/8.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Cold Cut Platter">
                                                    <font>
@@ -485,7 +485,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button31" mnemonicParsing="false" onAction="#menuItem8" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem8" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -497,12 +497,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/10.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="318.0" text="Wolfhook Juice">
                                                    <font>
@@ -526,7 +526,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button41" mnemonicParsing="false" onAction="#menuItem10" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem10" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -538,12 +538,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#menuItem1" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../images/12.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Pane onMousePressed="#menuItem1" prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
+                                          <Pane prefHeight="149.0" prefWidth="317.0" style="-fx-background-color: white;">
                                              <children>
                                                 <Label prefHeight="38.0" prefWidth="317.0" text="Tricolor Dango">
                                                    <font>
@@ -567,7 +567,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Button fx:id="button51" mnemonicParsing="false" onAction="#menuItem12" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
+                                          <Button mnemonicParsing="false" onAction="#menuItem12" prefHeight="149.0" prefWidth="82.0" style="-fx-background-color: #f5f5f5;" text="Add to Order">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>

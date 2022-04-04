@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -73,14 +74,14 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1155.0" style="-fx-background-color: lightgray;">
                            <children>
-                              <Label alignment="CENTER" layoutX="19.0" prefHeight="48.0" prefWidth="1117.0" text="Order summary" textAlignment="CENTER">
+                              <Label fx:id="title" alignment="CENTER" layoutX="19.0" prefHeight="50.0" prefWidth="1117.0" text="Order summary" textAlignment="CENTER">
                                  <font>
                                     <Font name="Berlin Sans FB" size="46.0" />
                                  </font>
                               </Label>
                               <VBox layoutY="57.0" prefHeight="422.0" prefWidth="1164.0">
                                  <children>
-                                    <HBox prefHeight="300.0" prefWidth="1164.0">
+                                    <HBox prefHeight="286.0" prefWidth="1164.0">
                                        <children>
                                           <VBox minHeight="300.0" minWidth="400.0">
                                              <children>
@@ -92,24 +93,47 @@
                                                 <Pane fx:id="itemListPane" prefHeight="200.0" prefWidth="200.0" />
                                              </children>
                                           </VBox>
-                                          <ImageView fitHeight="305.0" fitWidth="455.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/AboutUs21.png" />
-                                             </image>
+                                          <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="455.0">
                                              <HBox.margin>
-                                                <Insets left="290.0" />
+                                                <Insets left="300.0" />
                                              </HBox.margin>
-                                          </ImageView>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="25.0" prefWidth="455.0" style="-fx-background-color: lightgray;" text="Credit Card Number">
+                                                   <font>
+                                                      <Font name="Cambria" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="creditCardNum" style="-fx-background-color: white;" />
+                                                <Label alignment="CENTER" prefHeight="25.0" prefWidth="455.0" style="-fx-background-color: lightgray;" text="Name on Credit Card">
+                                                   <font>
+                                                      <Font name="Cambria" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="15.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="creditCardName" style="-fx-background-color: white;" />
+                                                <Label alignment="CENTER" prefHeight="25.0" prefWidth="455.0" style="-fx-background-color: lightgray;" text="Address">
+                                                   <font>
+                                                      <Font name="Cambria" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="15.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="address" style="-fx-background-color: white;" />
+                                                <Button mnemonicParsing="false" onAction="#checkout" prefHeight="59.0" prefWidth="146.0" text="CHECKOUT">
+                                                   <font>
+                                                      <Font name="Bell MT Bold" size="16.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
                                        </children>
                                     </HBox>
-                                    <Button onAction="#checkout" mnemonicParsing="false" prefHeight="59.0" prefWidth="146.0" text="CHECKOUT">
-                                       <font>
-                                          <Font name="Bell MT Bold" size="16.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets bottom="40.0" left="1000.0" right="40.0" top="20.0" />
-                                       </VBox.margin>
-                                    </Button>
                                  </children>
                               </VBox>
                            </children>

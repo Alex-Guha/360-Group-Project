@@ -77,6 +77,10 @@ public class Login {
 			String username = loginUsername.getText();
 			String password = loginPassword.getText();
 			
+			if(user == null) {
+				user = new Customer();
+			}
+			
 			if(user.login(username, password)) {
 				FileOutputStream f = new FileOutputStream(new File("userInfo.txt"));
 				ObjectOutputStream o = new ObjectOutputStream(f);
@@ -92,6 +96,7 @@ public class Login {
 		} catch(Exception e) {
 			title.setText("Something went wrong");
 			title.setTextFill(Color.RED);
+			e.printStackTrace();
 		}
 	}
 

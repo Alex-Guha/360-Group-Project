@@ -2,8 +2,10 @@ package application;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import Backend.Customer;
@@ -12,9 +14,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 
 public class Payment {
 	@FXML
@@ -22,6 +26,16 @@ public class Payment {
 
 	@FXML 
 	private Pane itemListPane;
+	
+	@FXML
+	private Label title;
+	
+	@FXML
+	private TextField creditCardNum;
+	@FXML
+	private TextField creditCardName;
+	@FXML
+	private TextField address;
 	
 	private Customer user;
 	@FXML
@@ -106,6 +120,34 @@ public class Payment {
 	}
 	
 	public void checkout(ActionEvent event) throws IOException {
-		user.checkOut();
+		try {
+			String cardNum = creditCardNum.getText().replaceAll(" ", "");
+			String cardName = creditCardName.getText();
+			String Address = address.getText();
+			if(cardNum.length() == 16) {
+				if(user == null) {
+					user = new Customer();
+				}
+				
+				user.initialize(cardNum, cardName, Address);
+				
+				user.checkOut();
+				
+				user.cart.clearCart();
+				
+				FileOutputStream f = new FileOutputStream(new File("userInfo.txt"));
+				ObjectOutputStream o = new ObjectOutputStream(f);
+				o.writeObject(user);
+				o.close();
+				f.close();
+				
+				Main m = new Main();
+				m.changeScene("sample.fxml");
+			} else {
+				title.setText("Credit Card Number Invalid");
+				creditCardNum.setText("");
+				title.setTextFill(Color.RED);
+			}
+		} catch(Exception e) {}
 	}
 }

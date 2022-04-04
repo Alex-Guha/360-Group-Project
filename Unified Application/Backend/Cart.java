@@ -33,6 +33,10 @@ public class Cart implements Serializable{
 		return lastChanged;
 	}
 	
+	public void clearCart() {
+		currentOrder = new ArrayList<MenuItem>();
+	}
+	
 	public ArrayList<MenuItem> getCurrentOrder(){
 		return this.currentOrder;
 	}

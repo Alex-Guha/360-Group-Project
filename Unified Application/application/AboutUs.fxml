@@ -70,7 +70,7 @@
             <HBox alignment="CENTER_LEFT" prefHeight="487.0" prefWidth="1280.0">
                <children>
                   <Accordion prefWidth="0.0" />
-                  <ScrollPane minHeight="400.0" prefHeight="2341.0" prefWidth="1168.0">
+                  <ScrollPane prefHeight="2341.0" prefWidth="1168.0">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2313.0" prefWidth="1163.0" style="-fx-background-color: white;">
                            <children>
@@ -283,7 +283,7 @@
                                                 <Insets left="270.0" top="7.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label prefHeight="18.0" prefWidth="106.0" text="Thanh Hoa">
+                                          <Label prefHeight="18.0" prefWidth="106.0" text="Zackary Guajardo">
                                              <font>
                                                 <Font name="Calisto MT Bold" size="12.0" />
                                              </font>

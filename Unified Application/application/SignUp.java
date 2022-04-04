@@ -88,6 +88,10 @@ public class SignUp {
 			String password = Password.getText();
 			String password2 = Password2.getText();
 			
+			if(user == null) {
+				user = new Customer();
+			}
+			
 			if(email.equals(email2) && !email.isEmpty()) {
 				if(password.equals(password2) && !password.isEmpty()) {
 					if(!username.isEmpty()) {
