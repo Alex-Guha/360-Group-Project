@@ -1,0 +1,12 @@
+1|Sweet Dream|3.0|1|images/1.jpg|A simple and decadent sweet, with a silky|smooth texture and long lasting aroma|of almond.
+2|Crystal Shrimp|3.0|1|images/2.jpg|A Liyue classic, made from whole fresh|shrimp and high quality flour. Has a|springy, tasty chew.
+3|Udon Noodles|9.0|1|images/3.jpg|Highly smooth and springy noodles.|Unlike ramen, which prizes dense flavors,|udon noodles use light aromatic flavors.
+4|Braised Meat|9.0|1|images/4.jpg|A stew based dish, featuring soft and|tender meat, simple and light vegetables,|and a thickened, down-to-earth soup base.
+5|Butter Crab|13.0|1|images/5.jpg|A grilled crab dish. Appropriate temperature|control has allowed the meat to stay moist|and fatty.
+6|Victorious Legend|13.0|1|images/6.jpg|A steaming-hot noodle dish. The meat was|prepared at low temperatures, the soup|seeps into every noodle.
+7|Sashimi Platter|13.0|1|images/7.jpg|The finest fish and shellfish, cut with|masterful technique and arranged neatly.|Each slice is rich and highly nutritious.
+8|Cold Cut Platter|11.0|1|images/8.jpg|A plate of cold cut meat. An equal balance|of bacon, ham, and sausage keeps|everyone happy.
+9|Berry & Mint Burst|6.0|1|images/9.jpg|A freshly squeezed, fashionable, and|fruity beverage. A reshreshing burst of|mint with berries, it has an exquisite aroma.
+10|Wolfhook Juice|6.0|1|images/10.jpg|Iced Wolfhook Juice mixed with a pinch of|other ingredients, forming a dreamy|shade of violet.
+11|Rice Pudding|5.0|1|images/11.jpg|A dessert made from rice.|The mouthfeel is fragrant and soft, a|perfect denouement to any meal.
+12|Tricolor Dango|5.0|1|images/12.jpg|A Liyue classic, made from whole fresh|shrimp and high quality flour. Has a|springy, tasty chew.

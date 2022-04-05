@@ -33,8 +33,8 @@ public class Deals implements Serializable{ //container class for an arraylist o
                 	continue;
                 String[] parse = data.split(",");
               
-                SpecialDeals newDeal = new SpecialDeals(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), Integer.parseInt(parse[4]), parse[5]);
-                deals.add(newDeal);
+                //SpecialDeals newDeal = new SpecialDeals(Integer.parseInt(parse[0]), parse[1], Float.parseFloat(parse[2]), Integer.parseInt(parse[3]), Integer.parseInt(parse[4]), parse[5]);
+                //deals.add(newDeal);
                 	
                
                 

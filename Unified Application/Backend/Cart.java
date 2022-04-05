@@ -46,10 +46,23 @@ public class Cart implements Serializable{
 	}
 	
 	public void addItem(MenuItem newItem) {
+		ListIterator<MenuItem> iterator = currentOrder.listIterator();
+		
+		while(iterator.hasNext()) {
+			MenuItem itemCompare = iterator.next();
+			
+			if (itemCompare.getId() == newItem.getId()) {
+				itemCompare.setQuantity(itemCompare.getQuantity() + 1);
+				lastChanged = newItem;
+				quantity++;
+				
+				return;
+			}
+		}
+		
 		currentOrder.add(newItem);
 		lastChanged = newItem;
 		quantity++;
-		//System.out.println("\nNew item has been added");
 	}
 	
 	public void removeItem(int newProductID) {

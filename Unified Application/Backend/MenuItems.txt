@@ -1,4 +1,0 @@
-0,Water,0.0,0,no
-1,HotDog,0.0,0,no
-2,hamburger,1.2222222E7,0,no
-3,soup,10,1,no

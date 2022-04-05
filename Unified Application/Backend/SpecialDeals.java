@@ -9,8 +9,8 @@ public class SpecialDeals extends MenuItem {
 	private int DiscountPercent;
 	
 	//constructor
-	public SpecialDeals(int id, String name, float price, int quantity,  int DiscountPercent, String imageLink) {
-		super(id, name, price, quantity, imageLink);
+	public SpecialDeals(int id, String name, float price, int quantity,  int DiscountPercent, String imageLink, String text1, String text2, String text3) {
+		super(id, name, price, quantity, imageLink, text1, text2, text3);
 		this.DiscountPercent = DiscountPercent;
 	}
 	

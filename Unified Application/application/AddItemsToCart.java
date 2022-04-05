@@ -42,7 +42,6 @@ public class AddItemsToCart {
 		}
 		
 		try {
-			
 			Label label = new Label(user.cart.lastAdded().getName());
 			itemName.getChildren().add(label);
 		} catch(NullPointerException e) {

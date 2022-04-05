@@ -45,8 +45,8 @@ public class Customer implements Serializable {
 		cart.addItem(item);
 	}
 	
-	public void removeFromCart(MenuItem item) {
-		cart.removeItem(item.getId());
+	public void removeFromCart(int id) {
+		cart.removeItem(id);
 	}
 	
 	public ArrayList<MenuItem> getOrder(){
