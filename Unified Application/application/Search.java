@@ -70,13 +70,15 @@ public class Search {
 			System.out.println("Error in loading menu.");
 			e.printStackTrace();
 		}
-		
+
 		// TODO Remove all items that don't match search from the menuList
 		try {
 			for(int i = 0; i < menuList.size() ; i++) {
 				// TODO Compare name of item at i to the search input
-				
-				//menuList.remove(i);
+				if(!menuList.get(i).getName().toLowerCase().contains(user.searchEntry.toLowerCase())) {
+					menuList.remove(i);
+					i--;
+				}
 			}
 		} catch(Exception e) {
 			System.out.println("Error in curating search results");
