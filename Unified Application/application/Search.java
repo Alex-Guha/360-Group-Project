@@ -1,4 +1,17 @@
 package application;
+import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.event.ActionEvent;
+import Backend.Customer;
+import Backend.MenuItem;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,39 +22,19 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Backend.Customer;
-import Backend.MenuItem;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-
-public class Menu {
+public class Search {
+	
 	@FXML
 	private Button button;
 	
 	@FXML
-	private TextField searchBar;
-	
+	private VBox searchBox;
+
 	private Customer user;
 	private ArrayList<MenuItem> menuList;
 	
 	@FXML
 	private Button loginBtn;
-	
-	@FXML
-	private VBox leftMenu;
-
-	@FXML
-	private VBox rightMenu;
 	
 	public void initialize() {
 		try {
@@ -61,10 +54,6 @@ public class Menu {
 			//System.out.println("User is not logged in");
 		}
 		
-		if(user == null) {
-			user = new Customer();
-		}
-		
 		try {
 			menuList = new ArrayList<MenuItem>();
 			File userList = new File(getClass().getResource("MenuItems.txt").toURI());
@@ -79,6 +68,18 @@ public class Menu {
             myReader.close();
 		} catch(Exception e) {
 			System.out.println("Error in loading menu.");
+			e.printStackTrace();
+		}
+		
+		// TODO Remove all items that don't match search from the menuList
+		try {
+			for(int i = 0; i < menuList.size() ; i++) {
+				// TODO Compare name of item at i to the search input
+				
+				//menuList.remove(i);
+			}
+		} catch(Exception e) {
+			System.out.println("Error in curating search results");
 			e.printStackTrace();
 		}
 		
@@ -141,17 +142,14 @@ public class Menu {
 				container.getChildren().add(btn);
 				
 				container.setPadding(new Insets(0,0,10,0));
-				if(i % 2 == 0) {
-					leftMenu.getChildren().add(container);
-				} else {
-					rightMenu.getChildren().add(container);
-				}
+				searchBox.getChildren().add(container);
 			}
 		} catch(Exception e) {
-			System.out.println("Error in rendering menu.");
+			System.out.println("Error in rendering search results");
 			e.printStackTrace();
 		}
 	}
+	
 	
 	public void navigateToMenu(ActionEvent event) throws IOException {
 		Main m = new Main();
@@ -176,28 +174,6 @@ public class Menu {
 	public void navigateToAbout(ActionEvent event) throws IOException {
 		Main m = new Main();
 		m.changeScene("AboutUs.fxml");
-	}
-	
-	public void navigateToSearch(ActionEvent event) throws IOException {
-		try {
-			user.searchEntry = searchBar.getText();
-			if(user.searchEntry.isEmpty() || user.searchEntry.isBlank()) {
-				searchBar.clear();
-				searchBar.setPromptText("Enter something before searching");
-			} else {
-				FileOutputStream f = new FileOutputStream(new File("userInfo.txt"));
-				ObjectOutputStream o = new ObjectOutputStream(f);
-				o.writeObject(user);
-				o.close();
-				f.close();
-
-				Main m = new Main();
-				m.changeScene("Search.fxml");
-			}
-		} catch(Exception e) {
-			System.out.println("Error in searching");
-			e.printStackTrace();
-		}
 	}
 	
 	public void navigateToLogin(ActionEvent event) throws IOException {

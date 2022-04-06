@@ -17,6 +17,7 @@ public class Customer implements Serializable {
 	public Cart cart;
 	public String Username;
 	public boolean isLoggedIn = false;
+	public String searchEntry = "";
 	
 	public Customer(String customerName, String address, String cardInfo, double acctBalance, Cart cart) {
 		this.customerName = customerName;
