@@ -18,6 +18,9 @@ public class Customer implements Serializable {
 	public String Username;
 	public boolean isLoggedIn = false;
 	public String searchEntry = "";
+	//int tracker = 0;
+	int purchases;
+	//ArrayList<ArrayList<MenuItem>> orderQueue;
 	
 	public Customer(String customerName, String address, String cardInfo, double acctBalance, Cart cart) {
 		this.customerName = customerName;
@@ -25,6 +28,10 @@ public class Customer implements Serializable {
 		this.cardInfo = cardInfo;
 		this.acctBalance = acctBalance;
 		this.cart = cart;
+		this.purchases = 0;
+		//this.orderQueue = new ArrayList<ArrayList<MenuItem>>();
+		//this.orderQueue = new ArrayList<ArrayList<MenuItem>>();
+
 	}
 	
 	public Customer() {
@@ -33,6 +40,10 @@ public class Customer implements Serializable {
 		this.cardInfo = "";
 		this.acctBalance = 0;
 		this.cart = new Cart();
+		this.purchases = 0;
+		//this.orderQueue = new ArrayList<ArrayList<MenuItem>>();
+		//this.orderQueue = new ArrayList<ArrayList<MenuItem>>();
+
 	}
 	
 	public void initialize(String customerName, String address, String cardInfo) {
@@ -40,6 +51,8 @@ public class Customer implements Serializable {
 		this.address = address;
 		this.cardInfo = cardInfo;
 		this.acctBalance = 0;
+		//this.purchases = 0;
+		//this.orderQueue = new ArrayList<ArrayList<MenuItem>>();
 	}
 	
 	public void addToCart(MenuItem item) {
@@ -62,8 +75,39 @@ public class Customer implements Serializable {
 		return cart.getQuantity();
 	}
 	
+	public int getPurchaseNumber() {
+		return this.purchases;
+		
+	}
+	
 	public void checkOut() {
-		System.out.println("Order Completed! Total: $" + cart.calcTotal());
+		//System.out.println(this.purchases);
+		if(this.purchases >= 3) {
+			
+			double f = (cart.calcTotal() * 0.9);
+			this.purchases = 0;
+			System.out.println("\nYou have earned a reward! You will get 10% off on this purchase.");
+			System.out.println("\nOrder Completed! Total: $" + f);
+		
+
+			
+		} else {
+		System.out.println("\nOrder Completed! Total: $" + cart.calcTotal());
+		
+		}
+		
+		
+		
+		/*if(orderQueue.size() == 1) {
+			
+			System.out.println("There is currently 1 order ahead of you. Your expected wait time is 15 minutes.");
+		} else {
+			System.out.println("There are currently " + orderQueue.size() + " orders ahead of you. Your expected wait time is " + 15*(orderQueue.size() + 1) + " minutes.");
+		}
+		
+		this.orderQueue.add(cart.getCurrentOrder()); */
+		this.purchases++; 
+	
 	}
 	
 	public boolean register(String userName, String passWord, String email) { 
